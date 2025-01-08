@@ -1,6 +1,5 @@
 import { Box, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
-import { faMarkdown } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 import EventActivity from "../components/EventActivity";
 import EventRoute from "./EventRoute";

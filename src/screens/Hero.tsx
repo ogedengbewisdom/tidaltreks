@@ -1,6 +1,4 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
-import { faMarkdown } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Hero = () => {
   return (
