@@ -1,4 +1,6 @@
-:root {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -21,15 +23,6 @@ a {
 a:hover {
   color: #535bf2;
 }
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -65,4 +58,18 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+}
+
+.helvetica {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-style: normal;
 }
