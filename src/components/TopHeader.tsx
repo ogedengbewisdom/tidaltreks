@@ -23,19 +23,14 @@ const TopHeader: React.FC = () => {
         <Box
           display={{ base: "none", md: "flex" }}
           alignItems={"center"}
-          gapX={"33px"}
+          gap={"33px"}
         >
           <Box>Call {phoneNumber}</Box>
           <Box letterSpacing={"0.0919px"}>Email: {email}</Box>
         </Box>
-        <Box
-          display={"flex"}
-          alignItems={"center"}
-          gapX={"30px"}
-          w={"181.95px"}
-        >
+        <Box display={"flex"} alignItems={"center"} gap={"30px"} w={"181.95px"}>
           <Box whiteSpace={"nowrap"}>Contact Us {"»"}</Box>
-          <Flex gapX={"10px"} w={"69.08px"}>
+          <Flex gap={"10px"} w={"69.08px"}>
             <Link to={"#"}>
               <FontAwesomeIcon
                 icon={faTwitter}

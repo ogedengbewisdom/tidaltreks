@@ -1,7 +1,6 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import { formatSpecificDate, LATESTPOST } from "../utils/formatDate";
 
-
 //  const specificDate = new Date(2022, 1, 10);
 const SocialEvents = () => {
   return (
@@ -9,9 +8,9 @@ const SocialEvents = () => {
       paddingX={{ base: "1rem", lg: "0rem" }}
       display={"flex"}
       flexDir={{ base: "column", lg: "row" }}
-      gapY={{ base: "50px", lg: "0px" }}
+      gap={{ base: "50px", lg: "25px" }}
       // justifyContent={"space-between"}
-      gapX={{ lg: "25px" }}
+      // gap={{ lg: "25px" }}
     >
       <Box
         w={{ base: "100%", lg: "368px" }}
@@ -152,10 +151,10 @@ const SocialEvents = () => {
           mt={"30px"}
           maxH={"320px"}
           overflowY={"auto"}
-          gapY={"20px"}
+          gap={"20px"}
         >
           {/* one */}
-          <Box display={"flex"} gapX={"10px"} alignItems={"center"}>
+          <Box display={"flex"} gap={"10px"} alignItems={"center"}>
             <Box w={"40px"} h={"40px"} borderRadius={"50%"} bgColor={"black"}>
               <Image src="/cff-avatar.png" w={"100%"} borderRadius={"50%"} />
             </Box>

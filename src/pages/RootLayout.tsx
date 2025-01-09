@@ -61,7 +61,7 @@ const RootLayout = () => {
         display={{ base: "flex", md: "none" }}
         flexDir={"column"}
         alignItems={"center"}
-        gapX={"20px"}
+        gap={"20px"}
         mt={"10px"}
       >
         <Box>

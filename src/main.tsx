@@ -1,14 +1,31 @@
-import {ChakraProvider, defaultSystem} from "@chakra-ui/react"
-// import { ThemeProvider } from "next-themes"
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <ChakraProvider value={defaultSystem}>
-    <App />
+// const breakpoints = {
+//   base: "0px",
+//   sm: "320px",
+//   md: "768px",
+//   lg: "960px",
+//   xl: "1200px",
+//   "2xl": "1536px",
+//   "3xl": "1636px",
+// };
+
+const theme = extendTheme({
+  // breakpoints,
+  fonts: {
+    body: `"Montserrat", Arial, sans-serif`,
+    heading: `"Montserrat", Arial, sans-serif`,
+  },
+});
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ChakraProvider theme={theme}>
+      <App />
     </ChakraProvider>
-  </StrictMode>,
-)
+  </React.StrictMode>
+);

@@ -34,3 +34,15 @@ export const LATESTPOST = [
     date: { year: 2022, month: 11, day: 29 },
   },
 ];
+
+export const LINKS = [
+  { title: "HOME", link: "/" },
+  { title: "BOOK A CRUISE", link: "/" },
+  { title: "MENUS", link: "/" },
+  { title: "PRIVATE EVENTS", link: "/" },
+  { title: "BUSINESS EVENTS", link: "/" },
+  { title: "ROUTE", link: "/" },
+  { title: "GALLERY", link: "/" },
+  { title: "GIFT CARDS", link: "/" },
+  { title: "BLOG", link: "/" },
+];

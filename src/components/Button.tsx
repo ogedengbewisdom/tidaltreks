@@ -15,7 +15,7 @@ const Button: React.FC<ButtonsProps> = (props) => {
       h={"45px"}
       display={"flex"}
       alignItems={"center"}
-      gapX={"10px"}
+      gap={"10px"}
       color={"#A89252"}
       _hover={{
         bgColor: "#A89252",

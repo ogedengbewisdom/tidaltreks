@@ -1,6 +1,5 @@
 import { Box, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
 
-
 import EventActivity from "../components/EventActivity";
 import EventRoute from "./EventRoute";
 import SocialEvents from "./SocialEvents";
@@ -59,7 +58,7 @@ const Events = () => {
             fontSize={{ base: "24px" }}
             fontWeight={400}
             lineHeight={{ base: "30px" }}
-            letterSpacing={{ base: "wider", "2xl": "widest" }}
+            // letterSpacing={{ base: "wider", "2xl": "widest" }}
             // color={"#614967"}
             color={"rgb(74, 73, 74)"}
             marginTop={{ xl: "19px" }}
@@ -78,7 +77,7 @@ const Events = () => {
               color={"#FFF"}
               display={"flex"}
               alignItems={"center"}
-              gapX={"10px"}
+              gap={"10px"}
             >
               {/* <FontAwesomeIcon icon={faMarkdown} /> */}
               <Box w={"24px"} h={"24px"}>
@@ -209,7 +208,7 @@ const Events = () => {
                 color={"#FFF"}
                 display={"flex"}
                 alignItems={"center"}
-                gapX={"10px"}
+                gap={"10px"}
               >
                 <Box w={"24px"} h={"24px"}>
                   <Image src="/icons8-checked-checkbox-48 (1).png" />

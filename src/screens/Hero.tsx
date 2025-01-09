@@ -67,11 +67,11 @@ const Hero = () => {
           src="/silver-armed-forces-covenant.jpg"
           display={{ base: "none", md: "block" }}
         />
-        <Image
+        {/* <Image
           src="/silver-armed-forces-covenant.jpg"
-          width={{ base: "78%" }}
+          width={{ base: "50%" }}
           display={{ base: "block", md: "none" }}
-        />
+        /> */}
       </Box>
       <Box
         position="fixed"
@@ -91,7 +91,7 @@ const Hero = () => {
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
-        gapX={"10px"}
+        gap={"10px"}
       >
         {/* <FontAwesomeIcon icon={faMarkdown} /> */}
         <Box w={"24px"} h={"24px"}>
@@ -107,7 +107,7 @@ const Hero = () => {
       </Box>
       <Box
         display={{ base: "none", md: "flex" }}
-        gapX={"20px"}
+        gap={"20px"}
         marginTop={"-45px"}
       >
         <Box>

@@ -1,4 +1,12 @@
-import { Box, Flex, Heading, Image, List, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  List,
+  ListItem,
+  Text,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { formatSpecificDate, LATESTPOST } from "../utils/formatDate";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -27,7 +35,7 @@ const GENERATELINKS = [
 ];
 const Footer: React.FC = () => {
   return (
-    <Box bgColor={"#000"}>
+    <Box bgColor={"#000"} className="Montserrat">
       <Box
         maxW={{ lg: "940px", xl: "1150px", "2xl": "1200px" }}
         marginX={{ md: "auto" }}
@@ -36,7 +44,7 @@ const Footer: React.FC = () => {
         display={"flex"}
         flexDir={{ base: "column", md: "row" }}
         justifyContent={"space-between"}
-        gapY={"40px"}
+        gap={"40px"}
         paddingX={{ base: "1.3rem", lg: "0rem" }}
       >
         {/* website links */}
@@ -46,17 +54,18 @@ const Footer: React.FC = () => {
             fontSize={"22px"}
             mb={"30px"}
             fontWeight={500}
+            className="Montserrat"
           >
             website links
           </Heading>
-          <List.Root display={"flex"} flexDir={"column"} gapY={"5px"}>
+          <List display={"flex"} flexDir={"column"} gap={"5px"}>
             {WEBSITELINKS.map((website, index) => {
               return (
                 <Link to={website.link} key={index}>
-                  <List.Item
+                  <ListItem
                     fontSize={"14px"}
                     fontWeight={500}
-                    listStyle={"none"}
+                    // listStyle={"none"}
                     textTransform={"capitalize"}
                     _hover={{
                       color: "#A89252",
@@ -65,11 +74,11 @@ const Footer: React.FC = () => {
                     transition="0.3s ease-in-out"
                   >
                     {website.title}
-                  </List.Item>
+                  </ListItem>
                 </Link>
               );
             })}
-          </List.Root>
+          </List>
         </Box>
         {/* Get in touch */}
         <Box color={"#FFF"}>
@@ -77,18 +86,19 @@ const Footer: React.FC = () => {
             textTransform={"uppercase"}
             fontSize={"22px"}
             mb={"30px"}
+            className="Montserrat"
             fontWeight={500}
           >
             Get in touch
           </Heading>
 
-          <List.Root display={"flex"} flexDir={"column"} gap={"30px"}>
+          <List display={"flex"} flexDir={"column"} gap={"30px"}>
             {GENERATELINKS.map((generate, index) => {
               return (
-                <List.Item
+                <ListItem
                   key={index}
                   display={"flex"}
-                  gapX={"10px"}
+                  gap={"10px"}
                   alignItems={"center"}
                 >
                   <Box
@@ -102,7 +112,7 @@ const Footer: React.FC = () => {
                   <Text fontSize={"14px"} fontWeight={500}>
                     {generate.title}
                   </Text>
-                </List.Item>
+                </ListItem>
               );
             })}
             <Box w={{ base: "100%", md: "270px" }}>
@@ -112,7 +122,7 @@ const Footer: React.FC = () => {
                 <strong>book a cruise</strong> page.
               </Text>
             </Box>
-          </List.Root>
+          </List>
         </Box>
         {/* Latest news */}
         <Box color={"#FFF"} display={{ base: "none", md: "block" }}>
@@ -120,11 +130,12 @@ const Footer: React.FC = () => {
             textTransform={"uppercase"}
             fontSize={"22px"}
             mb={"30px"}
+            className="Montserrat"
             fontWeight={500}
           >
             latest news
           </Heading>
-          <Box display={"flex"} flexDir={"column"} gapY={"5px"}>
+          <Box display={"flex"} flexDir={"column"} gap={"5px"}>
             {LATESTPOST.map((post, index) => {
               const postDateObject = new Date(
                 post.date.year,
@@ -176,17 +187,23 @@ const Footer: React.FC = () => {
           flexDir={"column"}
           alignItems={"center"}
           justifyContent={"center"}
-          gapY="20px"
+          gap="20px"
           py={{ base: "35px" }}
+          className="Montserrat"
         >
           <Box>
             <Image src="/logo-footer.jpg" />
           </Box>
           <Box>
-            <Text fontSize={"15px"} fontWeight={400} color={"#FFF"}>
+            <Text
+              className="Montserrat"
+              fontSize={"15px"}
+              fontWeight={400}
+              color={"#FFF"}
+            >
               The Floating Grace
             </Text>
-            <Flex gapX={"10px"} justifyContent={"center"} mt={"15px"}>
+            <Flex gap={"10px"} justifyContent={"center"} mt={"15px"}>
               <Link to={"#"}>
                 <FontAwesomeIcon
                   icon={faTwitter}
