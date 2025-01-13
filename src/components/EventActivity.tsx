@@ -14,7 +14,14 @@ const EventActivity: React.FC<EventActivityProps> = (props) => {
         minW={{ md: "230px" }}
         display={{ base: "flex", md: "block" }}
       >
-        <Image src={props.src} w={{ base: "145px", md: "100%" }} />
+        {/* <Box w={"145px"}>
+          <Image src={props.src} w={"145px"} h={"60px"} />
+        </Box> */}
+        <Image
+          src={props.src}
+          w={{ base: "15%", sm: "145px", md: "100%" }}
+          h={{ md: "200px" }}
+        />
         <Box
           w="100%"
           bgColor={"#000"}

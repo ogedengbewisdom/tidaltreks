@@ -29,9 +29,7 @@ const Hero = () => {
             color={"#FFF"}
             lineHeight={{ base: "24px" }}
           >
-            INTRODUCING A NEW AND <br />
-            UNIQUE DINING <br />
-            EXPERIENCE
+            PRESENTING A ONE-OF-A-KIND LIFETIME EXPERIENCE
           </Heading>
           <Text
             fontSize={{ base: "12px" }}
@@ -41,10 +39,11 @@ const Hero = () => {
             textAlign={"center"}
             marginTop={"20px"}
           >
-            Take a cruise on Liverpool's only floating restaurant and bar boat,
-            The Floating Grace. Enjoy the sights of the Albert Dock and
-            excellent food on one of our lunch or dinner cruises. You can also
-            book the boat for functions and events.
+            Set sail with Tidal Treks for unforgettable boat cruises. Explore
+            breathtaking views, hidden gems, and thrilling adventures. Perfect
+            for peaceful escapes, exciting journeys, or private events.
+            Accessible, comfortable, and ready to create unforgettable memories
+            on the water.
           </Text>
           <Text
             textAlign={"center"}
@@ -53,7 +52,8 @@ const Hero = () => {
             fontWeight={700}
             marginTop={"10px"}
           >
-            Please note we are wheelchair friendly!
+            We are happy to accommodate wheelchair accessibility for those who
+            need it!
           </Text>
         </Box>
       </Box>
@@ -67,11 +67,6 @@ const Hero = () => {
           src="/silver-armed-forces-covenant.jpg"
           display={{ base: "none", md: "block" }}
         />
-        {/* <Image
-          src="/silver-armed-forces-covenant.jpg"
-          width={{ base: "50%" }}
-          display={{ base: "block", md: "none" }}
-        /> */}
       </Box>
       <Box
         position="fixed"
@@ -107,15 +102,14 @@ const Hero = () => {
       </Box>
       <Box
         display={{ base: "none", md: "flex" }}
-        gap={"20px"}
-        marginTop={"-45px"}
+        pb={{ base: "0px", md: "40px" }}
       >
-        <Box>
+        {/* <Box>
           <Image src="/coach-tourism-award.png" fit="cover" />
         </Box>
         <Box>
           <Image src="/mmia-award-1.png" fit="cover" width={"100%"} />
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   );

@@ -28,12 +28,12 @@ const EVENTACTIVITYLINK = [
   },
   {
     name: "private events",
-    src: "/8-wpcf_368x212.jpeg",
+    src: "/IMG_1603.JPG",
     link: "/",
   },
   {
     name: "business events",
-    src: "/book-business.jpg",
+    src: "/IMG_1601.JPG",
     link: "/",
   },
 ];
@@ -51,19 +51,18 @@ const Events = () => {
           flexDir={"column"}
           justifyContent={"center"}
           alignItems={"center"}
+          px={{ base: "0.3rem", sm: "1rem", md: "0px" }}
         >
           <Heading
             textTransform={"uppercase"}
             textAlign={"center"}
-            fontSize={{ base: "24px" }}
+            fontSize={{ base: "20px", md: "24px" }}
             fontWeight={400}
             lineHeight={{ base: "30px" }}
-            // letterSpacing={{ base: "wider", "2xl": "widest" }}
-            // color={"#614967"}
             color={"rgb(74, 73, 74)"}
             marginTop={{ xl: "19px" }}
           >
-            Welcome to tidal treks first <br /> floating restaurant
+            Welcome to tidal treks first floating restaurant
           </Heading>
           <Box marginTop={"30px"} marginBottom={"23px"}>
             <Box
@@ -93,28 +92,20 @@ const Events = () => {
             </Box>
           </Box>
           <Text
-            display={{ base: "none", md: "block" }}
             fontSize={{ base: "16px" }}
             textAlign={"center"}
             fontWeight={400}
             lineHeight={{ base: "normal" }}
             color={"rgb(74, 73, 74)"}
           >
-            See the best views of Liverpool’s historic docklands, enjoy
-            <br /> excellent food, make use of our on-board bar and relax in{" "}
-            <br /> style on The Floating Grace.
-          </Text>
-          <Text
-            display={{ base: "block", md: "none" }}
-            fontSize={{ base: "16px" }}
-            textAlign={"center"}
-            fontWeight={400}
-            lineHeight={{ base: "normal" }}
-            color={"rgb(74, 73, 74)"}
-          >
-            See the best views of Liverpool’s historic docklands, enjoy
-            excellent food, make use of our on-board bar and relax in style on
-            The Floating Grace.
+            Experience the beauty of coastal wonders, savor delicious cuisine,
+            and unwind in style with <strong>Tidal Treks</strong>. Embark on an
+            unforgettable adventure as we take you on a journey through stunning
+            seascapes, complete with exceptional service, a vibrant on-board
+            bar, and a touch of oceanic magic. Whether you're seeking thrilling
+            exploration or serene relaxation, Tidal Treks is where memories are
+            made, tides are embraced, and every moment is an adventure waiting
+            to happen.
           </Text>
         </Box>
 
@@ -122,7 +113,7 @@ const Events = () => {
           display={{ base: "grid", md: "grid" }}
           columns={{ base: 1, md: 3 }}
           gap={{ base: "15px", md: "18px", lg: "20px", xl: "30px" }}
-          paddingX={{ base: "1rem", "2xl": "1rem" }}
+          paddingX={{ base: "0.3rem", sm: "1rem", "2xl": "1rem" }}
           mt={"58px"}
         >
           {EVENTACTIVITYLINK.map((item, index) => {
@@ -142,7 +133,7 @@ const Events = () => {
         <EventRoute />
       </Box>
 
-      <Box
+      {/* <Box
         bgImage={'url("/0-1-2.jpg")'}
         bgSize="cover"
         bgRepeat="no-repeat"
@@ -213,7 +204,6 @@ const Events = () => {
                 <Box w={"24px"} h={"24px"}>
                   <Image src="/icons8-checked-checkbox-48 (1).png" />
                 </Box>
-                {/* <FontAwesomeIcon icon={faMarkdown} /> */}
                 <Text
                   fontSize={{ base: "20px" }}
                   fontWeight={500}
@@ -225,7 +215,7 @@ const Events = () => {
             </Box>
           </Box>
         </Box>
-      </Box>
+      </Box> */}
 
       <Box
         maxW={{ lg: "940px", xl: "1150px", "2xl": "1200px" }}

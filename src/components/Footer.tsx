@@ -201,7 +201,7 @@ const Footer: React.FC = () => {
               fontWeight={400}
               color={"#FFF"}
             >
-              The Floating Grace
+              Tidal Treks
             </Text>
             <Flex gap={"10px"} justifyContent={"center"} mt={"15px"}>
               <Link to={"#"}>

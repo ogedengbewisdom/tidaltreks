@@ -19,7 +19,7 @@ const SocialEvents = () => {
         boxSizing={"border-box"}
         borderBottom={"4px solid #a89252"}
         py={"40px"}
-        px={"28px"}
+        px={"10px"}
       >
         <Text
           textAlign={"center"}
@@ -97,7 +97,7 @@ const SocialEvents = () => {
         boxSizing={"border-box"}
         borderBottom={"4px solid #a89252"}
         py={"40px"}
-        px={"28px"}
+        px={"10px"}
       >
         <Text
           textAlign={"center"}
@@ -134,7 +134,7 @@ const SocialEvents = () => {
         boxSizing={"border-box"}
         borderBottom={"4px solid #a89252"}
         py={"40px"}
-        px={"28px"}
+        px={"10px"}
       >
         <Text
           textAlign={"center"}
@@ -160,7 +160,7 @@ const SocialEvents = () => {
             </Box>
             <Box>
               <Text fontWeight={700} color={"#4a494a"} fontSize={"14px"}>
-                The Floating Grace
+                Tidal Treks
               </Text>
               <Text fontWeight={400} color={"#9197a3"} fontSize={"11px"}>
                 18 hours ago
@@ -170,11 +170,13 @@ const SocialEvents = () => {
           {/* two */}
           <Box>
             <Text color={"#4a494a"} fontSize={"16px"}>
-              Only hours to go before we welcome in a whole new year and a whole
-              new era... or it can be. Start as you mean to go on by ensuring
-              you reward yourself for even the smallest of achievements, and
-              treat yourself to one of our regular cruises on The Floating Grace
-              Or call 07540 373838 or email bookings@floatinggrace.co.u
+              "Exciting things are on the horizon! 🌟 The countdown has begun,
+              and we're almost ready to set sail into a brand-new adventure.
+              While we prepare to launch, we want to invite you to be part of
+              something special. Stay tuned for more updates, and get ready to
+              treat yourself to unforgettable moments on board Tidal Treks. 🛥️
+              We can’t wait to welcome you aboard soon! Keep an eye on this
+              space for more details. 🚀"
             </Text>
           </Box>
           {/* three */}

@@ -17,7 +17,7 @@ const RootLayout = () => {
         bgSize="cover"
         bgRepeat="no-repeat"
         backgroundPosition={"center"}
-        h={{ base: "47vh", md: "100%" }}
+        h={{ base: "60vh", md: "100%" }}
       >
         <MainNavigation />
         <Box
@@ -32,7 +32,8 @@ const RootLayout = () => {
         display={{ base: "block", md: "none" }}
         bg={"rgba(0, 0, 0, 0.9)"}
         py={"20px"}
-        mt={"-119px"}
+        px={"10px"}
+        mt={"-135px"}
       >
         <Heading
           as={"h3"}
@@ -44,8 +45,7 @@ const RootLayout = () => {
           lineHeight={{ base: "24px" }}
           letterSpacing={"0.9px"}
         >
-          INTRODUCING A NEW AND UNIQUE
-          <br /> DINING EXPERIENCE
+          PRESENTING A ONE-OF-A-KIND LIFETIME EXPERIENCE
         </Heading>
         <Text
           textAlign={"center"}
@@ -54,10 +54,11 @@ const RootLayout = () => {
           fontWeight={700}
           marginTop={"10px"}
         >
-          Please note we are wheelchair friendly!
+          We are happy to accommodate wheelchair accessibility for those who
+          need it!
         </Text>
       </Box>
-      <Box
+      {/* <Box
         display={{ base: "flex", md: "none" }}
         flexDir={"column"}
         alignItems={"center"}
@@ -70,7 +71,7 @@ const RootLayout = () => {
         <Box>
           <Image src="/mmia-award-1.png" fit="cover" />
         </Box>
-      </Box>
+      </Box> */}
       <main>
         <Outlet />
       </main>

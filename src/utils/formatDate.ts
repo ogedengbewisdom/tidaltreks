@@ -19,7 +19,7 @@ export const LATESTPOST = [
     date: { year: 2022, month: 1, day: 10 },
   },
   {
-    title: "Floating Grace MD Present...",
+    title: "Tidal Treks MD Present...",
     content: "Advice, News",
     date: { year: 2022, month: 11, day: 29 },
   },
@@ -29,7 +29,7 @@ export const LATESTPOST = [
     date: { year: 2022, month: 2, day: 22 },
   },
   {
-    title: "Floating Grace MD Present...",
+    title: "Tidal Treks MD Present...",
     content: "Advice, News",
     date: { year: 2022, month: 11, day: 29 },
   },
