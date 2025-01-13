@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import MainNavigation from "../screens/MainNavigation";
-import { Box, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import Hero from "../screens/Hero";
 import TopHeader from "../components/TopHeader";
 import Footer from "../components/Footer";
