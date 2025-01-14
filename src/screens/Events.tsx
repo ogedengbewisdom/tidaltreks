@@ -236,6 +236,7 @@ const Events = () => {
           marginX={{ md: "auto" }}
           pt={{ base: "70px", md: "110px" }}
           pb={{ base: "50px", md: "70px" }}
+          px={{ base: "5px", md: "16px", lg: "0" }}
         >
           <Heading
             fontSize={"26px"}
@@ -245,7 +246,7 @@ const Events = () => {
             textAlign={"center"}
             textTransform={"uppercase"}
           >
-            Looking to book a special event?
+            You Want To Host A Special Event?
           </Heading>
           <Text
             fontSize={{ base: "24px", md: "26px" }}
@@ -254,10 +255,10 @@ const Events = () => {
             color={"#FFF"}
             textAlign={"center"}
             lineHeight={"24px"}
-            px={{ base: "5px", md: "0px" }}
           >
-            We offer a complete events package including catering,
-            entertainment, a full bar and scenic views of the Albert Dock
+            Tidal Treks provides a complete event experience with catering,
+            entertainment, a full bar, and breathtaking views, whether by land
+            or sea.
           </Text>
           <Text
             fontSize={"26px"}

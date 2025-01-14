@@ -32,7 +32,6 @@ const EventRoute = () => {
               textTransform={"uppercase"}
               fontSize={{ base: "20px", md: "24px" }}
               color={"#4A494A"}
-              display={{ base: "none", md: "block" }}
               fontWeight={400}
               lineHeight={"27px"}
               textAlign={"center"}
@@ -84,7 +83,6 @@ const EventRoute = () => {
               textTransform={"uppercase"}
               fontSize={{ base: "20px", md: "24px" }}
               color={"#4A494A"}
-              display={{ base: "none", md: "block" }}
               fontWeight={400}
               lineHeight={"27px"}
               textAlign={"center"}
@@ -133,7 +131,6 @@ const EventRoute = () => {
               textTransform={"uppercase"}
               fontSize={{ base: "20px", md: "24px" }}
               color={"#4A494A"}
-              display={{ base: "none", md: "block" }}
               fontWeight={400}
               lineHeight={"27px"}
               textAlign={"center"}
