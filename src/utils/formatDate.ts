@@ -37,7 +37,7 @@ export const LATESTPOST = [
 
 export const LINKS = [
   { title: "HOME", link: "/" },
-  { title: "BOOK A CRUISE", link: "/" },
+  { title: "BOOK A CRUISE", link: "/book-a-cruise" },
   { title: "MENUS", link: "/" },
   { title: "PRIVATE EVENTS", link: "/" },
   { title: "BUSINESS EVENTS", link: "/" },

@@ -1,18 +1,30 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import MainNavigation from "../screens/MainNavigation";
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import Hero from "../screens/Hero";
 import TopHeader from "../components/TopHeader";
 import Footer from "../components/Footer";
 
 const RootLayout = () => {
+  const location = useLocation();
+  const path = location.pathname;
   return (
-    <>
+    <Box position={"relative"}>
       <TopHeader />
       <Box
         bgImage={{
-          base: 'url("/image1-380x280.jpg")',
-          md: 'url("/FG-Saloon-new-chairs-cropped.jpg")',
+          base:
+            path === "/"
+              ? 'url("/image1-380x280.jpg")'
+              : path === "/book-a-cruise"
+              ? 'url("/IMG_1601.JPG")'
+              : "",
+          md:
+            path === "/"
+              ? 'url("/FG-Saloon-new-chairs-cropped.jpg")'
+              : path === "/book-a-cruise"
+              ? 'url("/IMG_1601.JPG")'
+              : "",
         }}
         bgSize="cover"
         bgRepeat="no-repeat"
@@ -21,15 +33,16 @@ const RootLayout = () => {
       >
         <MainNavigation />
         <Box
-          paddingTop={{ base: "80px", "2xl": "111px" }}
-          // paddingBottom={"10px"}
+          paddingTop={{ base: "80px", xl: "111px" }}
+          display={path === "/" ? "block" : "none"}
         >
           <Hero />
         </Box>
+        <Box pb={"300px"} display={path === "/" ? "none" : "block"}></Box>
       </Box>
       <Box width={"100%"} height={"3px"} bgColor={"#E0E0E0"}></Box>
       <Box
-        display={{ base: "block", md: "none" }}
+        display={{ base: path === "/" ? "block" : "none", md: "none" }}
         bg={"rgba(0, 0, 0, 0.9)"}
         py={"20px"}
         px={"10px"}
@@ -58,28 +71,46 @@ const RootLayout = () => {
           need it!
         </Text>
       </Box>
-      {/* <Box
-        display={{ base: "flex", md: "none" }}
-        flexDir={"column"}
-        alignItems={"center"}
-        gap={"20px"}
-        mt={"10px"}
-      >
-        <Box>
-          <Image src="/coach-tourism-award.png" fit="cover" />
-        </Box>
-        <Box>
-          <Image src="/mmia-award-1.png" fit="cover" />
-        </Box>
-      </Box> */}
       <main>
         <Outlet />
+        <Box
+          position="fixed"
+          right={{ base: "15%", md: "25px" }}
+          left={{ base: "15%", md: "auto" }}
+          zIndex={1}
+          bottom={"20px"}
+          as={"button"}
+          border={"none"}
+          padding={{ base: "10px 25px" }}
+          cursor={"pointer"}
+          bgColor={"#A49252"}
+          boxShadow={"0 0 4px 1px rgba(0, 0, 0, 0.3)"}
+          _hover={{ bgColor: "#867441" }}
+          transition="0.3s ease-in-out"
+          color={"#FFF"}
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent={"center"}
+          gap={"10px"}
+        >
+          {/* <FontAwesomeIcon icon={faMarkdown} /> */}
+          <Box w={"24px"} h={"24px"}>
+            <Image src="/icons8-checked-checkbox-48 (1).png" />
+          </Box>
+          <Text
+            fontSize={{ base: "20px", "2xl": "25px" }}
+            fontWeight={400}
+            className="helvetica"
+          >
+            Book Now!
+          </Text>
+        </Box>
       </main>
       <footer>
         <Footer />
         <Box
           bgColor={"#A89252"}
-          px={{ base: "1.2rem", md: "0rem" }}
+          px={{ base: "0.8rem", sm: "1rem", lg: "0rem" }}
           py={{ base: "2px", md: "20px" }}
         >
           <Box>
@@ -107,12 +138,12 @@ const RootLayout = () => {
               <strong>
                 <a href="https://x.com/OnimisiWisdom">Ogedengbe Wisdom</a>
               </strong>{" "}
-              | © The Floating Grace of Liverpool Boat Charters 2025
+              | © Tidal Treks 2025
             </Text>
           </Box>
         </Box>
       </footer>
-    </>
+    </Box>
   );
 };
 

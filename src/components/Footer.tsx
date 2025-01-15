@@ -25,7 +25,7 @@ const WEBSITELINKS = [
 ];
 
 const GENERATELINKS = [
-  { title: "Call 0810 280 3169", src: "/304080.png" },
+  { title: "Call 07368 536127", src: "/304080.png" },
   { title: "Send Us An Email »", src: "/icons8-message-24.png" },
   {
     title: `Albert Dock, Salthouse
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
         flexDir={{ base: "column", md: "row" }}
         justifyContent={"space-between"}
         gap={"40px"}
-        paddingX={{ base: "1.3rem", lg: "0rem" }}
+        px={{ base: "0.8rem", sm: "1rem", lg: "0rem" }}
       >
         {/* website links */}
         <Box color={"#FFF"}>
@@ -191,8 +191,8 @@ const Footer: React.FC = () => {
           py={{ base: "35px" }}
           className="Montserrat"
         >
-          <Box>
-            <Image src="/logo-footer.jpg" />
+          <Box w={"100px"} h={"100px"}>
+            <Image src="/tidalTreksLogo.JPG" />
           </Box>
           <Box>
             <Text

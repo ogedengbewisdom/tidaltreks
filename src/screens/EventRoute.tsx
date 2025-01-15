@@ -15,7 +15,7 @@ const EventRoute = () => {
         display={"flex"}
         justifyContent={{ md: "space-between" }}
         flexDir={{ base: "column", md: "row" }}
-        paddingX={{ base: "1rem", md: "0rem" }}
+        paddingX={{ base: "0.3rem", sm: "1rem", md: "0rem" }}
         pos={"relative"}
       >
         <Box position={{ md: "absolute" }} left={"0px"} top={"-10px"}>
@@ -23,7 +23,7 @@ const EventRoute = () => {
             w={{ base: "100%", md: "530px" }}
             bgColor={"#FFF"}
             mt={"30px"}
-            px={"35px"}
+            px={{ base: "10px", md: "35px" }}
             pt={"50px"}
             pb={"50px"}
           >
@@ -114,7 +114,7 @@ const EventRoute = () => {
         display={"flex"}
         justifyContent={{ md: "space-between" }}
         flexDir={{ base: "column", md: "row" }}
-        paddingX={{ base: "1rem", md: "0rem" }}
+        paddingX={{ base: "0.3rem", sm: "1rem", md: "0rem" }}
         pos={"relative"}
       >
         <Box position={{ md: "absolute" }} left={"0px"} top={"-10px"}>
@@ -122,7 +122,7 @@ const EventRoute = () => {
             w={{ base: "100%", md: "530px" }}
             bgColor={"#FFF"}
             mt={"30px"}
-            px={"35px"}
+            px={{ base: "10px", md: "35px" }}
             pt={"50px"}
             pb={"50px"}
           >

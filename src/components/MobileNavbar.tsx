@@ -51,8 +51,8 @@ const MobileNavbar: React.FC<MobileNavbarPops> = (props) => {
                   <Image
                     pos={"absolute"}
                     top={"16px"}
-                    src="/logo-header.png"
-                    w={{ base: 170, "2xl": 165 }}
+                    src="/tidalTreksLogo.JPG"
+                    w={{ base: 100, "2xl": 115 }}
                     h={"auto"}
                   />
                 </Link>

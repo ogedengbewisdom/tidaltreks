@@ -68,38 +68,7 @@ const Hero = () => {
           display={{ base: "none", md: "block" }}
         />
       </Box>
-      <Box
-        position="fixed"
-        right={{ base: "15%", md: "25px" }}
-        left={{ base: "15%", md: "auto" }}
-        zIndex={1}
-        bottom={"20px"}
-        as={"button"}
-        border={"none"}
-        padding={{ base: "10px 25px" }}
-        cursor={"pointer"}
-        bgColor={"#A49252"}
-        boxShadow={"0 0 4px 1px rgba(0, 0, 0, 0.3)"}
-        _hover={{ bgColor: "#867441" }}
-        transition="0.3s ease-in-out"
-        color={"#FFF"}
-        display={"flex"}
-        alignItems={"center"}
-        justifyContent={"center"}
-        gap={"10px"}
-      >
-        {/* <FontAwesomeIcon icon={faMarkdown} /> */}
-        <Box w={"24px"} h={"24px"}>
-          <Image src="/icons8-checked-checkbox-48 (1).png" />
-        </Box>
-        <Text
-          fontSize={{ base: "20px", "2xl": "25px" }}
-          fontWeight={400}
-          className="helvetica"
-        >
-          Book Now!
-        </Text>
-      </Box>
+
       <Box
         display={{ base: "none", md: "flex" }}
         pb={{ base: "0px", md: "40px" }}

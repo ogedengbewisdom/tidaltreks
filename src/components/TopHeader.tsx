@@ -5,7 +5,7 @@ import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons/faSquareIn
 import { Link } from "react-router-dom";
 
 const TopHeader: React.FC = () => {
-  const phoneNumber = "0810 280 3169";
+  const phoneNumber = "07368 536127";
   const email = "tidaltreks@gmail.co.uk";
   return (
     <Box bgColor={"#000000"} color={"#FFF"}>

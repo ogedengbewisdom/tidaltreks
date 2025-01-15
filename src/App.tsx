@@ -4,6 +4,7 @@ import HomePage from "./pages/Home";
 import BlogPage from "./pages/Blog";
 import RootLayout from "./pages/RootLayout";
 import ErrorPage from "./pages/Error";
+import BookCruisePage from "./pages/BookCruise";
 
 function App() {
   const router = createBrowserRouter([
@@ -14,9 +15,9 @@ function App() {
       children: [
         { index: true, element: <HomePage /> },
         { path: "blog", element: <BlogPage /> },
+        { path: "book-a-cruise", element: <BookCruisePage /> },
       ],
     },
-    { path: "/admin", element: <p>Love you</p> },
   ]);
   return <RouterProvider router={router} />;
 }

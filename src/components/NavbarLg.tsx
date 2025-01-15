@@ -15,7 +15,6 @@ import { LINKS } from "../utils/formatDate";
 const NavBarLg = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-
   const BOOKLINK = [
     { title: "SUNDAY LUNCH CRUISE", link: "/" },
     { title: "EVENING DINNER CRUISE", link: "/" },
@@ -48,8 +47,8 @@ const NavBarLg = () => {
             <Image
               pos={"absolute"}
               top={"16px"}
-              src="/logo-header.png"
-              w={{ base: 170, "2xl": 165 }}
+              src="/tidalTreksLogo.JPG"
+              w={{ base: 100, "2xl": 115 }}
               h={"auto"}
             />
           </Link>

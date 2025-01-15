@@ -12,7 +12,7 @@ const Button: React.FC<ButtonsProps> = (props) => {
       as={"button"}
       bgColor={props.bgColor ? props.bgColor : "#000"}
       px={"20px"}
-      h={"45px"}
+      h={{ base: "38px", md: "45px" }}
       display={"flex"}
       alignItems={"center"}
       gap={"10px"}
@@ -24,7 +24,7 @@ const Button: React.FC<ButtonsProps> = (props) => {
       transition="0.5s ease-in-out"
     >
       <Text
-        fontSize={{ base: "13px", "2xl": "14px" }}
+        fontSize={{ base: "12px", "2xl": "14px" }}
         fontWeight={400}
         color={props.color ? props.color : "#FFF"}
         letterSpacing={"0.095"}
