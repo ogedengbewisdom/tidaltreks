@@ -1,7 +1,6 @@
 import {
   Box,
   Heading,
-  Image,
   List,
   ListItem,
   SimpleGrid,

@@ -10,7 +10,6 @@ const RootLayout = () => {
   const location = useLocation();
   const path = location.pathname;
 
-  const pos = "5-cropped-01.jpg";
   return (
     <Box position={"relative"}>
       <ScrollToTop />
