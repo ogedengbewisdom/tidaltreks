@@ -4,12 +4,16 @@ import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import Hero from "../screens/Hero";
 import TopHeader from "../components/TopHeader";
 import Footer from "../components/Footer";
+import ScrollToTop from "../screens/ScrollTop";
 
 const RootLayout = () => {
   const location = useLocation();
   const path = location.pathname;
+
+  const pos = "5-cropped-01.jpg";
   return (
     <Box position={"relative"}>
+      <ScrollToTop />
       <TopHeader />
       <Box
         bgImage={{
@@ -18,12 +22,20 @@ const RootLayout = () => {
               ? 'url("/image1-380x280.jpg")'
               : path === "/book-a-cruise"
               ? 'url("/IMG_1601.JPG")'
+              : path === "/menus"
+              ? 'url("/best-sunday-lunch1-1-wpcf_1800x300.jpg")'
+              : path === "/private-events"
+              ? 'url("/5-cropped-01.jpg")'
               : "",
           md:
             path === "/"
               ? 'url("/FG-Saloon-new-chairs-cropped.jpg")'
               : path === "/book-a-cruise"
               ? 'url("/IMG_1601.JPG")'
+              : path === "/menus"
+              ? 'url("/best-sunday-lunch1-1-wpcf_1800x300.jpg")'
+              : path === "/private-events"
+              ? 'url("/5-cropped-01.jpg")'
               : "",
         }}
         bgSize="cover"
@@ -34,11 +46,40 @@ const RootLayout = () => {
         <MainNavigation />
         <Box
           paddingTop={{ base: "80px", xl: "111px" }}
-          display={path === "/" ? "block" : "none"}
+          display={path === "/" || path === "/menus" ? "block" : "none"}
         >
-          <Hero />
+          {/* <Hero /> */}
+          {path === "/" ? (
+            <Hero />
+          ) : path === "/menus" ? (
+            <Box
+              display={{ base: "none", md: "flex" }}
+              alignItems={"center"}
+              justifyContent={"center"}
+              bg={"rgba(0,0,0,0.74)"}
+              py={"2rem"}
+            >
+              {" "}
+              <Heading
+                as={"h1"}
+                color={"#FFF"}
+                fontSize={"32px"}
+                fontWeight={600}
+                className="montserrat"
+                textShadow={"rgb(0, 0, 0) 2px 2px 0px"}
+              >
+                Menus
+              </Heading>
+            </Box>
+          ) : (
+            ""
+          )}
         </Box>
-        <Box pb={"300px"} display={path === "/" ? "none" : "block"}></Box>
+        <Box
+          pb={"300px"}
+          display={path === "/" || path === "/menus" ? "none" : "block"}
+        ></Box>
+        {/* <Box> Menus</Box> */}
       </Box>
       <Box width={"100%"} height={"3px"} bgColor={"#E0E0E0"}></Box>
       <Box
@@ -70,6 +111,26 @@ const RootLayout = () => {
           We are happy to accommodate wheelchair accessibility for those who
           need it!
         </Text>
+      </Box>
+      <Box
+        display={{ base: path === "/menus" ? "flex" : "none", md: "none" }}
+        alignItems={"center"}
+        justifyContent={"center"}
+        bg={"rgba(0,0,0,0.74)"}
+        mt={"-77px"}
+        py={"1rem"}
+      >
+        {" "}
+        <Heading
+          as={"h1"}
+          color={"#FFF"}
+          fontSize={"32px"}
+          fontWeight={600}
+          className="montserrat"
+          textShadow={"rgb(0, 0, 0) 2px 2px 0px"}
+        >
+          Menus
+        </Heading>
       </Box>
       <main>
         <Outlet />
@@ -110,7 +171,7 @@ const RootLayout = () => {
         <Footer />
         <Box
           bgColor={"#A89252"}
-          px={{ base: "0.8rem", sm: "1rem", lg: "0rem" }}
+          px={{ base: "1rem", lg: "0rem" }}
           py={{ base: "2px", md: "20px" }}
         >
           <Box>

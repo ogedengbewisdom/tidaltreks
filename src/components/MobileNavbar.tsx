@@ -47,7 +47,7 @@ const MobileNavbar: React.FC<MobileNavbarPops> = (props) => {
                 }}
                 pos={"relative"}
               >
-                <Link to={"/"}>
+                <Link to={"/"} onClick={() => props.onClose()}>
                   <Image
                     pos={"absolute"}
                     top={"16px"}
@@ -83,6 +83,7 @@ const MobileNavbar: React.FC<MobileNavbarPops> = (props) => {
               {LINKS.map((item, index) => {
                 return (
                   <ListItem
+                    onClick={() => props.onClose()}
                     key={index}
                     fontSize={{ base: "20px" }}
                     fontWeight={600}
@@ -94,7 +95,14 @@ const MobileNavbar: React.FC<MobileNavbarPops> = (props) => {
                     transition="0.3s ease-in-out"
                     whiteSpace={"nowrap"}
                   >
-                    <NavLink to={item.link}>{item.title}</NavLink>
+                    <NavLink
+                      to={item.link}
+                      style={({ isActive }) => ({
+                        color: isActive ? "#A89252" : "#FFF",
+                      })}
+                    >
+                      {item.title}
+                    </NavLink>
                   </ListItem>
                 );
               })}

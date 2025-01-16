@@ -60,6 +60,10 @@ button:focus-visible {
   }
 } */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", Arial, sans-serif;
 }

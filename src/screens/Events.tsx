@@ -4,39 +4,8 @@ import EventActivity from "../components/EventActivity";
 import EventRoute from "./EventRoute";
 import SocialEvents from "./SocialEvents";
 import Advert from "./Advert";
+import { EVENTACTIVITYLINK, EVENTROUTE } from "../utils/formatDate";
 
-const EVENTACTIVITYLINK = [
-  {
-    name: "Evening dinner cruise",
-    src: "/book-lunch-dinner-wpcf_368x212-1.jpg",
-    link: "/",
-  },
-  {
-    name: "Sunday lunch cruises",
-    src: "/IMG_1987-wpcf_368x212.jpg",
-    link: "/",
-  },
-  {
-    name: "Afternoon tea cruises",
-    src: "/2018-11-06-at-17.30.366-1-wpcf_368x212.jpeg",
-    link: "/",
-  },
-  {
-    name: "valentines cruises",
-    src: "/IMG_5071-wpcf_368x212.jpeg",
-    link: "/",
-  },
-  {
-    name: "private events",
-    src: "/IMG_1603.JPG",
-    link: "/",
-  },
-  {
-    name: "business events",
-    src: "/IMG_1601.JPG",
-    link: "/",
-  },
-];
 const Events = () => {
   return (
     <>
@@ -51,7 +20,7 @@ const Events = () => {
           flexDir={"column"}
           justifyContent={"center"}
           alignItems={"center"}
-          px={{ base: "0.3rem", sm: "1rem", md: "0px" }}
+          px={{ base: "1rem", md: "0px" }}
         >
           <Heading
             textTransform={"uppercase"}
@@ -113,7 +82,7 @@ const Events = () => {
           display={{ base: "grid", md: "grid" }}
           columns={{ base: 1, md: 3 }}
           gap={{ base: "15px", md: "18px", lg: "20px", xl: "30px" }}
-          paddingX={{ base: "0.3rem", sm: "1rem", "2xl": "1rem" }}
+          paddingX={{ base: "1rem", "2xl": "1rem" }}
           mt={"58px"}
         >
           {EVENTACTIVITYLINK.map((item, index) => {
@@ -130,7 +99,26 @@ const Events = () => {
       </Box>
 
       <Box bgColor={"#E0E0E0"} mt={{ base: "60px", md: "120px" }}>
-        <EventRoute />
+        <Box
+          maxW={{ lg: "940px", xl: "1150px", "2xl": "1200px" }}
+          marginX={{ md: "auto" }}
+          display={{ base: "flex" }}
+          gap={{ base: "20px", md: "60px" }}
+          flexDir={"column"}
+          paddingY={{ base: "27px", md: "90px" }}
+        >
+          {EVENTROUTE.map((event, index) => {
+            return (
+              <EventRoute
+                key={index}
+                title={event.title}
+                description={event.description}
+                src={event.src}
+                reverse={index % 2 !== 0}
+              />
+            );
+          })}
+        </Box>
       </Box>
 
       {/* <Box

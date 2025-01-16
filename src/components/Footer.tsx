@@ -8,21 +8,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { formatSpecificDate, LATESTPOST } from "../utils/formatDate";
+import { formatSpecificDate, LATESTPOST, LINKS } from "../utils/formatDate";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons/faSquareInstagram";
-const WEBSITELINKS = [
-  { title: "home", link: "/" },
-  { title: "book a cruise", link: "/" },
-  { title: "menus", link: "/" },
-  { title: "private events", link: "/" },
-  { title: "route map", link: "/" },
-  { title: "gallery", link: "/" },
-  { title: "blog", link: "/" },
-  { title: "contact us", link: "/" },
-  { title: "privacy policy", link: "/" },
-];
 
 const GENERATELINKS = [
   { title: "Call 07368 536127", src: "/304080.png" },
@@ -45,7 +34,7 @@ const Footer: React.FC = () => {
         flexDir={{ base: "column", md: "row" }}
         justifyContent={"space-between"}
         gap={"40px"}
-        px={{ base: "0.8rem", sm: "1rem", lg: "0rem" }}
+        px={{ base: "1rem", lg: "0rem" }}
       >
         {/* website links */}
         <Box color={"#FFF"}>
@@ -59,7 +48,7 @@ const Footer: React.FC = () => {
             website links
           </Heading>
           <List display={"flex"} flexDir={"column"} gap={"5px"}>
-            {WEBSITELINKS.map((website, index) => {
+            {LINKS.map((website, index) => {
               return (
                 <Link to={website.link} key={index}>
                   <ListItem

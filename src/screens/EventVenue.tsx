@@ -1,13 +1,14 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import Button from "../components/Button";
 
-interface EventRouteProps {
+interface EventVenueProps {
   title: string;
   description: string;
   src: string;
   reverse?: boolean;
+  amount: string;
 }
-const EventRoute: React.FC<EventRouteProps> = (props) => {
+const EventVenue: React.FC<EventVenueProps> = (props) => {
   return (
     <Box
       display={"flex"}
@@ -20,10 +21,10 @@ const EventRoute: React.FC<EventRouteProps> = (props) => {
         position={{ md: "absolute" }}
         left={props.reverse ? "auto" : "0px"}
         right={props.reverse ? "0px" : "auto"}
-        top={"-10px"}
+        top={{ md: "-30px", lg: "-5px" }}
       >
         <Box
-          w={{ base: "100%", md: "530px" }}
+          w={{ base: "100%", md: "370px", lg: "530px" }}
           bgColor={"#FFF"}
           mt={"30px"}
           px={{ base: "10px", md: "35px" }}
@@ -46,12 +47,22 @@ const EventRoute: React.FC<EventRouteProps> = (props) => {
             fontWeight={400}
             lineHeight={"22px"}
             textAlign={"center"}
+            color={"#4A494A"}
             mt={"25px"}
           >
             {props.description}
           </Text>
+          <Text
+            fontSize={"15px"}
+            lineHeight={"22px"}
+            textAlign={"center"}
+            color={"#4A494A"}
+            my={"20px"}
+          >
+            <strong>{props.amount}</strong>
+          </Text>
           <Box display={"flex"} justifyContent={"center"} mt={"25px"}>
-            <Button />
+            <Button title="ENQUIRE NOW" />
           </Box>
         </Box>
       </Box>
@@ -65,4 +76,4 @@ const EventRoute: React.FC<EventRouteProps> = (props) => {
   );
 };
 
-export default EventRoute;
+export default EventVenue;

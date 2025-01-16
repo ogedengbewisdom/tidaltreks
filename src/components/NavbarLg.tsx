@@ -86,7 +86,14 @@ const NavBarLg = () => {
                   transition="0.3s ease-in-out"
                   whiteSpace={"nowrap"}
                 >
-                  <NavLink to={item.link}>{item.title}</NavLink>
+                  <NavLink
+                    to={item.link}
+                    style={({ isActive }) => ({
+                      color: isActive ? "#A89252" : "#FFF",
+                    })}
+                  >
+                    {item.title}
+                  </NavLink>
                 </ListItem>
               );
             })}

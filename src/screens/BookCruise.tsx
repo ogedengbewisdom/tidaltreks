@@ -3,83 +3,7 @@ import EventRoute from "./EventRoute";
 import Advert from "./Advert";
 import Button from "../components/Button";
 import GoogleMapPlaces from "./GoogleMap";
-
-const ACTIVITY = [
-  {
-    description:
-      "Discover breathtaking waterways and unforgettable journeys with Tidal Treks’ unique cruises!",
-    src: "/IMG_1603.JPG",
-  },
-  {
-    description:
-      "Indulge in a flavorful meal surrounded by captivating and picturesque landscapes.",
-    src: "/usp-2.jpg",
-  },
-  {
-    description:
-      "Welcome aboard the purpose-built Tidal treks event center, perfect for hosting gatherings of any size.",
-    src: "/IMG_1598.JPG",
-  },
-];
-
-const EVENTSFOOD = [
-  {
-    show: true,
-    title: " Evening Dinner Cruise",
-    date: "Wednesday to Saturday",
-    description: `Our evening dinner cruises provide a special and atmospheric dining experience, perfect for a relaxed evening with friends and family or a romantic meal with a significant other. Board the boat at the Albert Dock, our staff will then serve your two course meal as you peacefully cruise through Liverpool’s historic docks.`,
-    footer: `Please provide us with advanced notice if any member of your party have allergies or special dietary requirements.`,
-    src: "/AdobeStock_78931456-760x398.jpeg",
-    lists: [
-      "2 hour evening dinner cruise",
-      "2 course dinner",
-      "On-board bar",
-      "Board at 7pm",
-      "Set sail at 7:30pm",
-      "Returns at 9pm",
-    ],
-    amount: 35,
-  },
-  {
-    show: false,
-    title: "Sunday Lunch Cruise",
-    date: "Sunday",
-    description: `For a different take on the classic Sunday lunch experience step aboard The Floating Grace for a relaxing cruise. Our talented chefs prepare a tasty two-course set lunch, with children’s menus available, so there really is something for everyone. Board the boat at the Albert Dock and enjoy a relaxing cruise down Liverpool’s historic docks as our staff serve your meal. Best enjoyed with friends and family.`,
-    footer: `Please provide us with advanced notice if any member of your party have allergies or special dietary requirements.`,
-    src: "/Book-A-Cruise-09-368x328.jpg",
-    lists: [
-      "2 hour lunch cruise",
-      "2 course lunch",
-      "On-board bar",
-      "Option 1",
-      "Board at 12pm",
-      "Set sail at 12:30pm",
-      "Returns at 2pm",
-      "Option 2",
-      "Board at 3pm",
-      "Set sail at 3:30pm",
-      "Returns at 5pm",
-    ],
-    amount: 25,
-  },
-  {
-    show: false,
-    title: "Afternoon Tea Cruise",
-    date: "Monday & Tuesday",
-    description: `Enjoy a delightful afternoon tea experience with a twist on the Floating Grace. Our talented chefs prepare a selection of sandwiches, cakes, and scones, served with tea or coffee. Board the boat at the Albert Dock and enjoy a relaxing cruise down Liverpool’s historic docks as our staff serve your meal. Best enjoyed with friends and family.`,
-    footer: `Please provide us with advanced notice if any member of your party have allergies or special dietary requirements.`,
-    src: "/Afternoon-Tea-Cruise-368x328.jpg",
-    lists: [
-      "2 hour afternoon tea cruise",
-      "Afternoon tea",
-      "On-board bar",
-      "Board at 12pm",
-      "Set sail at 12:30pm",
-      "Returns at 2pm",
-    ],
-    amount: 20,
-  },
-];
+import { ACTIVITY, EVENTROUTE, EVENTSFOOD } from "../utils/formatDate";
 
 const BookCruise = () => {
   return (
@@ -94,7 +18,7 @@ const BookCruise = () => {
           flexDir={"column"}
           justifyContent={"center"}
           alignItems={"center"}
-          px={{ base: "0.3rem", sm: "1rem", md: "0px" }}
+          px={{ base: "1rem", md: "0px" }}
           gap={"20px"}
         >
           <Heading
@@ -123,7 +47,7 @@ const BookCruise = () => {
         </Box>
 
         <Box
-          px={{ base: "0.3rem", sm: "1rem", md: "0rem" }}
+          px={{ base: "1rem", md: "0rem" }}
           mt={{ base: "3rem" }}
           display={"flex"}
           flexDir={{ base: "column", md: "row" }}
@@ -174,7 +98,7 @@ const BookCruise = () => {
         bgColor={"#E0E0E0"}
         mt={{ base: "60px", md: "120px" }}
         py={{ base: "60px", md: "50px" }}
-        px={{ base: "0.3rem", sm: "1rem", lg: "0rem" }}
+        px={{ base: "1rem", lg: "0rem" }}
       >
         <Box display={"flex"} flexDir={"column"} gap={"40px"}>
           {EVENTSFOOD.map((event, index) => {
@@ -325,7 +249,25 @@ const BookCruise = () => {
         <GoogleMapPlaces />
       </Box>
       <Box bgColor={"#E0E0E0"}>
-        <EventRoute />
+        <Box
+          maxW={{ lg: "940px", xl: "1150px", "2xl": "1200px" }}
+          marginX={{ md: "auto" }}
+          display={{ base: "flex" }}
+          gap={{ base: "20px", md: "60px" }}
+          flexDir={"column"}
+          paddingY={{ base: "27px", md: "90px" }}
+        >
+          {EVENTROUTE.map((event, index) => {
+            return (
+              <EventRoute
+                key={index}
+                title={event.title}
+                description={event.description}
+                src={event.src}
+              />
+            );
+          })}
+        </Box>
       </Box>
       <Advert />
     </>
