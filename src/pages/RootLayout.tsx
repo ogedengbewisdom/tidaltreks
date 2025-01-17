@@ -14,6 +14,7 @@ const RootLayout = () => {
     <Box position={"relative"}>
       <ScrollToTop />
       <TopHeader />
+      {/* start */}
       <Box
         bgImage={{
           base:
@@ -25,7 +26,12 @@ const RootLayout = () => {
               ? 'url("/best-sunday-lunch1-1-wpcf_1800x300.jpg")'
               : path === "/private-events"
               ? 'url("/5-cropped-01.jpg")'
+              : path === "/business-events"
+              ? 'url("/personal-events-splash-image.jpg")'
+              : path === "/route"
+              ? 'url("/Albert-Dock-49031-wpcf_1920x520.jpg")'
               : "",
+
           md:
             path === "/"
               ? 'url("/FG-Saloon-new-chairs-cropped.jpg")'
@@ -35,6 +41,10 @@ const RootLayout = () => {
               ? 'url("/best-sunday-lunch1-1-wpcf_1800x300.jpg")'
               : path === "/private-events"
               ? 'url("/5-cropped-01.jpg")'
+              : path === "/business-events"
+              ? 'url("/personal-events-splash-image.jpg")'
+              : path === "/route"
+              ? 'url("/Albert-Dock-49031-wpcf_1920x520.jpg")'
               : "",
         }}
         bgSize="cover"
@@ -42,44 +52,47 @@ const RootLayout = () => {
         backgroundPosition={"center"}
         h={{ base: "60vh", md: "100%" }}
       >
-        <MainNavigation />
-        <Box
-          paddingTop={{ base: "80px", xl: "111px" }}
-          display={path === "/" || path === "/menus" ? "block" : "none"}
-        >
-          {/* <Hero /> */}
-          {path === "/" ? (
-            <Hero />
-          ) : path === "/menus" ? (
-            <Box
-              display={{ base: "none", md: "flex" }}
-              alignItems={"center"}
-              justifyContent={"center"}
-              bg={"rgba(0,0,0,0.74)"}
-              py={"2rem"}
-            >
-              {" "}
-              <Heading
-                as={"h1"}
-                color={"#FFF"}
-                fontSize={"32px"}
-                fontWeight={600}
-                className="montserrat"
-                textShadow={"rgb(0, 0, 0) 2px 2px 0px"}
+        <Box bgColor={path === "/route" ? "rgba(0,0,0,0.4)" : ""}>
+          <MainNavigation />
+          <Box
+            paddingTop={{ base: "80px", xl: "111px" }}
+            display={path === "/" || path === "/menus" ? "block" : "none"}
+          >
+            {/* <Hero /> */}
+            {path === "/" ? (
+              <Hero />
+            ) : path === "/menus" ? (
+              <Box
+                display={{ base: "none", md: "flex" }}
+                alignItems={"center"}
+                justifyContent={"center"}
+                bg={"rgba(0,0,0,0.74)"}
+                py={"2rem"}
               >
-                Menus
-              </Heading>
-            </Box>
-          ) : (
-            ""
-          )}
+                {" "}
+                <Heading
+                  as={"h1"}
+                  color={"#FFF"}
+                  fontSize={"32px"}
+                  fontWeight={600}
+                  className="montserrat"
+                  textShadow={"rgb(0, 0, 0) 2px 2px 0px"}
+                >
+                  Menus
+                </Heading>
+              </Box>
+            ) : (
+              ""
+            )}
+          </Box>
+          <Box
+            pb={"300px"}
+            display={path === "/" || path === "/menus" ? "none" : "block"}
+          ></Box>
+          {/* <Box> Menus</Box> */}
         </Box>
-        <Box
-          pb={"300px"}
-          display={path === "/" || path === "/menus" ? "none" : "block"}
-        ></Box>
-        {/* <Box> Menus</Box> */}
       </Box>
+      {/* stop */}
       <Box width={"100%"} height={"3px"} bgColor={"#E0E0E0"}></Box>
       <Box
         display={{ base: path === "/" ? "block" : "none", md: "none" }}
@@ -130,6 +143,38 @@ const RootLayout = () => {
         >
           Menus
         </Heading>
+      </Box>
+
+      <Box
+        display={{ base: path === "/route" ? "flex" : "none" }}
+        alignItems={"center"}
+        justifyContent={"center"}
+        flexDirection={"column"}
+        gap={"20px"}
+        mt={{ base: "-250px", sm: "-355px", md: "-200px" }}
+        py={"1rem"}
+      >
+        {" "}
+        <Heading
+          as={"h1"}
+          color={"#FFF"}
+          fontSize={"32px"}
+          fontWeight={600}
+          className="montserrat"
+          textShadow={"rgb(0, 0, 0) 2px 2px 0px"}
+          textTransform={"uppercase"}
+        >
+          Route map
+        </Heading>
+        <Text
+          color={"#FFF"}
+          fontSize={{ base: "20px", md: "24px" }}
+          textAlign={"center"}
+          className="montserrat"
+        >
+          Tidal Treks glides past serene parks and sandy beaches, offering
+          breathtaking views of these tranquil, picturesque landscapes
+        </Text>
       </Box>
       <main>
         <Outlet />

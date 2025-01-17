@@ -41,7 +41,7 @@ export const LINKS = [
   { title: "MENUS", link: "/menus" },
   { title: "PRIVATE EVENTS", link: "/private-events" },
   { title: "BUSINESS EVENTS", link: "/business-events" },
-  { title: "ROUTE", link: "/routes" },
+  { title: "ROUTE", link: "/route" },
   { title: "GALLERY", link: "/gallery" },
   { title: "GIFT CARDS", link: "/gift-card" },
   { title: "BLOG", link: "blog" },
@@ -140,13 +140,33 @@ export const EVENTVENUE = [
   },
   {
     title: "Christenings",
-    description: `Your child’s christening is a very special occasion shared with close friends and family. Celebrate this special event with a cruise on the Floating Grace. Our team will work with your to create your perfect event.`,
+    description: `Your child’s christening is a very special occasion shared with close friends and family. Celebrate this special event with a cruise on Tida Treks. Our team will work with your to create your perfect event.`,
     src: "/christenings-communions-760x398.jpg",
     amount: "From £25 per person",
   },
   {
     title: "General Private Events",
     description: `We can host a wide range of other private events including reunions, engagement parties and many more. Contact our team to discuss your exact requirements and we’ll work with you to create the perfect event.`,
+    src: "/other-personal-events-760x398.jpg",
+    amount: "From £25 per person",
+  },
+];
+export const EVENTBUSINESS = [
+  {
+    title: "CHRISTMAS PARTY",
+    description: `Make your Christmas party unforgettable with our expert planning. Tida Treks offers a magical venue for festive celebrations, perfect for creating lasting memories. Let us handle every detail while you enjoy a flawless and spacious event`,
+    src: "/Business-Events-04-760x398.jpg",
+    amount: "From £25 per person",
+  },
+  {
+    title: "OFFICE PARTIES",
+    description: `Planning a memorable celebration for your team? Let us create a unique experience on board. Our expert team will tailor every detail of the event to match your vision, ensuring an unforgettable occasion for your staff.`,
+    src: "/Business-Events-02-760x398.jpg",
+    amount: "From £25 per person",
+  },
+  {
+    title: "meetings & presentation",
+    description: `Need a unique venue for your next meeting or networking event? Book The Floating Grace! Equipped with full audio-visual facilities, WiFi, and power outlets, it’s the perfect space to inspire creativity and connect in style.`,
     src: "/other-personal-events-760x398.jpg",
     amount: "From £25 per person",
   },
@@ -174,7 +194,7 @@ export const EVENTSFOOD = [
     show: false,
     title: "Sunday Lunch Cruise",
     date: "Sunday",
-    description: `For a different take on the classic Sunday lunch experience step aboard The Floating Grace for a relaxing cruise. Our talented chefs prepare a tasty two-course set lunch, with children’s menus available, so there really is something for everyone. Board the boat at the Albert Dock and enjoy a relaxing cruise down Liverpool’s historic docks as our staff serve your meal. Best enjoyed with friends and family.`,
+    description: `For a different take on the classic Sunday lunch experience step aboard Tida Treks for a relaxing cruise. Our talented chefs prepare a tasty two-course set lunch, with children’s menus available, so there really is something for everyone. Board the boat at the Albert Dock and enjoy a relaxing cruise down Liverpool’s historic docks as our staff serve your meal. Best enjoyed with friends and family.`,
     footer: `Please provide us with advanced notice if any member of your party have allergies or special dietary requirements.`,
     src: "/Book-A-Cruise-09-368x328.jpg",
     lists: [
@@ -196,7 +216,7 @@ export const EVENTSFOOD = [
     show: false,
     title: "Afternoon Tea Cruise",
     date: "Monday & Tuesday",
-    description: `Enjoy a delightful afternoon tea experience with a twist on the Floating Grace. Our talented chefs prepare a selection of sandwiches, cakes, and scones, served with tea or coffee. Board the boat at the Albert Dock and enjoy a relaxing cruise down Liverpool’s historic docks as our staff serve your meal. Best enjoyed with friends and family.`,
+    description: `Enjoy a delightful afternoon tea experience with a twist on Tida Treks. Our talented chefs prepare a selection of sandwiches, cakes, and scones, served with tea or coffee. Board the boat at the Albert Dock and enjoy a relaxing cruise down Liverpool’s historic docks as our staff serve your meal. Best enjoyed with friends and family.`,
     footer: `Please provide us with advanced notice if any member of your party have allergies or special dietary requirements.`,
     src: "/Afternoon-Tea-Cruise-368x328.jpg",
     lists: [

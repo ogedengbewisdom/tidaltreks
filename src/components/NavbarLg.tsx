@@ -7,13 +7,15 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import MobileNavbar from "./MobileNavbar";
 import { LINKS } from "../utils/formatDate";
 // import MobileNavbar from "./MobileNavbar";
 
 const NavBarLg = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const location = useLocation();
+  const path = location.pathname;
 
   const BOOKLINK = [
     { title: "SUNDAY LUNCH CRUISE", link: "/" },
@@ -26,7 +28,13 @@ const NavBarLg = () => {
       <Box pos={"absolute"} zIndex={2} bottom={"-1000px"}>
         <MobileNavbar isOpen={isOpen} onClose={onClose} />
       </Box>
-      <Box as={"nav"} bg={{ base: "#000", md: "rgba(0, 0, 0, 0.7)" }}>
+      <Box
+        as={"nav"}
+        bg={{
+          base: "#000",
+          md: path === "/route" ? "rgba(0, 0, 0, 0.2)" : "rgba(0,0,0,0.7)",
+        }}
+      >
         <Box
           display={"flex"}
           alignItems={"center"}
@@ -68,9 +76,7 @@ const NavBarLg = () => {
             display={{ base: "none", lg: "flex" }}
             flexDir={"row"}
             className="Montserrat"
-            // listStyle={"none"}
             gap={{ base: "18.9px", "2xl": "18.9px" }}
-            // marginRight={"5px"}
           >
             {LINKS.map((item, index) => {
               return (
@@ -82,14 +88,13 @@ const NavBarLg = () => {
                   _hover={{
                     color: "#A89252",
                   }}
-                  // letterSpacing={"0.099px"}
                   transition="0.3s ease-in-out"
                   whiteSpace={"nowrap"}
                 >
                   <NavLink
                     to={item.link}
                     style={({ isActive }) => ({
-                      color: isActive ? "#A89252" : "#FFF",
+                      color: isActive ? "#A89252" : "inherit",
                     })}
                   >
                     {item.title}

@@ -7,6 +7,8 @@ import ErrorPage from "./pages/Error";
 import BookCruisePage from "./pages/BookCruise";
 import MenusPage from "./pages/Menus";
 import PrivateEventsPage from "./pages/PrivateEvents";
+import BusinessEventsPage from "./pages/BusinessEvents";
+import RoutePage from "./pages/Route";
 
 function App() {
   const router = createBrowserRouter([
@@ -20,6 +22,8 @@ function App() {
         { path: "book-a-cruise", element: <BookCruisePage /> },
         { path: "menus", element: <MenusPage /> },
         { path: "private-events", element: <PrivateEventsPage /> },
+        { path: "business-events", element: <BusinessEventsPage /> },
+        { path: "route", element: <RoutePage /> },
       ],
     },
   ]);

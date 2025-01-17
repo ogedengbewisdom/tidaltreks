@@ -1,8 +1,8 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
-import { ACTIVITY, EVENTVENUE } from "../utils/formatDate";
+import { ACTIVITY, EVENTBUSINESS } from "../utils/formatDate";
 import EventVenue from "./EventVenue";
 
-const PrivateEvents = () => {
+const BusinessEvents = () => {
   return (
     <>
       <Box
@@ -27,7 +27,7 @@ const PrivateEvents = () => {
             marginTop={{ xl: "19px" }}
             color={"rgb(74, 73, 74)"}
           >
-            private events
+            business Events
           </Heading>
           <Text
             fontSize={{ base: "16px", lg: "21px" }}
@@ -36,9 +36,10 @@ const PrivateEvents = () => {
             lineHeight={{ base: "normal", lg: "31px" }}
             color={"rgb(74, 73, 74)"}
           >
-            Dreaming of hosting an extraordinary private event? Our stunning
-            venue sets the stage for unforgettable moments, tailored perfectly
-            to your vision, with no limit on the guest list!
+            Dreaming of hosting an extraordinary business, coporate and
+            charitable event? Our stunning venue sets the stage for
+            unforgettable moments, tailored perfectly to your vision, with no
+            limit on the guest list!
           </Text>
           <Text
             fontSize={{ base: "12px", lg: "15px" }}
@@ -114,7 +115,7 @@ const PrivateEvents = () => {
           paddingTop={{ base: "27px", md: "90px" }}
           paddingBottom={{ base: "70px", md: "90px" }}
         >
-          {EVENTVENUE.map((event, index) => {
+          {EVENTBUSINESS.map((event, index) => {
             return (
               <EventVenue
                 key={index}
@@ -132,4 +133,4 @@ const PrivateEvents = () => {
   );
 };
 
-export default PrivateEvents;
+export default BusinessEvents;
