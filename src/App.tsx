@@ -11,6 +11,7 @@ import BusinessEventsPage from "./pages/BusinessEvents";
 import RoutePage from "./pages/Route";
 import GalleryPage from "./pages/Gallery";
 import GalleryDetailPage, { galleryDetailLoader } from "./pages/GalleryDetail";
+import BlogDetailPage, { blogLoader } from "./pages/BlogDetail";
 
 function App() {
   const router = createBrowserRouter([
@@ -41,6 +42,12 @@ function App() {
       element: <GalleryDetailPage />,
       errorElement: <ErrorPage />,
       loader: galleryDetailLoader,
+    },
+    {
+      path: "/blog/:blogId",
+      element: <BlogDetailPage />,
+      errorElement: <ErrorPage />,
+      loader: blogLoader,
     },
   ]);
   return <RouterProvider router={router} />;

@@ -32,6 +32,8 @@ const RootLayout = () => {
               ? 'url("/Albert-Dock-49031-wpcf_1920x520.jpg")'
               : path === "/gallery"
               ? 'url("/IMG_2052-wpcf_1920x450.jpg")'
+              : path === "/blog"
+              ? 'url("/Business-Events-01.jpg")'
               : "",
 
           md:
@@ -49,6 +51,8 @@ const RootLayout = () => {
               ? 'url("/Albert-Dock-49031-wpcf_1920x520.jpg")'
               : path === "/gallery"
               ? 'url("/IMG_2052-wpcf_1920x450.jpg")'
+              : path === "/blog"
+              ? 'url("/Business-Events-01.jpg")'
               : "",
         }}
         bgSize={"cover"}
@@ -177,6 +181,38 @@ const RootLayout = () => {
         >
           Tidal Treks glides past serene parks and sandy beaches, offering
           breathtaking views of these tranquil, picturesque landscapes
+        </Text>
+      </Box>
+      <Box
+        display={{ base: path === "/blog" ? "flex" : "none" }}
+        alignItems={"center"}
+        justifyContent={"center"}
+        flexDirection={"column"}
+        gap={"20px"}
+        mt={{ base: "-175px", sm: "-177px", md: "-130px" }}
+        py={"1rem"}
+        px={{ base: "1rem" }}
+        bgColor={"rgba(0,0,0,0.74)"}
+      >
+        <Heading
+          as={"h1"}
+          color={"#FFF"}
+          fontSize={{ base: "24px", md: "32px" }}
+          fontWeight={600}
+          className="montserrat"
+          textShadow={"rgb(0, 0, 0) 2px 2px 0px"}
+          textTransform={"uppercase"}
+        >
+          Latest news
+        </Heading>
+        <Text
+          color={"#FFF"}
+          fontSize={{ base: "20px", md: "24px" }}
+          textAlign={"center"}
+          className="montserrat"
+        >
+          Our customers are top priority, please let us know how we can improver
+          our services
         </Text>
       </Box>
       <Box

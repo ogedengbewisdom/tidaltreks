@@ -341,3 +341,18 @@ export const GALLERY = [
     ],
   },
 ];
+
+export const BLOGPOST = [
+  {
+    title: "Welcome to Tidal Treks: Your Adventure Awaits!",
+    src: "/Business-Events-04-760x398.jpg",
+    date: new Date(2020, 1, 11),
+    description: `Are you ready to embark on a journey like no other? Tidal Treks is here to redefine your idea of adventure and relaxation, offering unforgettable boat cruise experiences that promise to take your breath away. Whether you're craving the thrill of the open seas, a tranquil escape from the everyday hustle, or a unique setting to celebrate life's moments, Tidal Treks is your perfect host. At Tidal Treks, we’re more than just a boat cruise service; we’re curators of memories. Our cruises are designed to immerse you in the wonders of nature while delivering an unparalleled sense of luxury and comfort. Picture yourself gliding across serene waters, feeling the gentle sea breeze on your face, and witnessing breathtaking views that stay etched in your heart forever. For the thrill-seekers, our adventure cruises take you to explore hidden coves, unspoiled shores, and the mysteries of the ocean. Dive into the excitement and discover the untamed beauty of the waters`,
+  },
+  {
+    title: "Celebrating the Launch of Tidal Treks!",
+    src: "/4-768x576.jpeg",
+    date: new Date(2016, 9, 29),
+    description: `The moment we’ve all been waiting for has finally arrived—Tidal Treks is officially setting sail! We couldn’t be more thrilled to welcome you to the beginning of what promises to be an extraordinary adventure. From the gentle lapping of waves to the exhilaration of exploring hidden treasures of the sea, Tidal Treks is here to make your dreams of life on the water a reality. We’re incredibly grateful for the support and enthusiasm we’ve received as we’ve prepared for this launch. From our passionate team to the wonderful community that has embraced our vision, Tidal Treks is the product of countless hours of hard work, collaboration, and a shared love for the ocean. Thank you for believing in us and being a part of this milestone.`,
+  },
+];

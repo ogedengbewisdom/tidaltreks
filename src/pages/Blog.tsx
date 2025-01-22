@@ -1,7 +1,7 @@
-import { Heading } from "@chakra-ui/react";
+import Blog from "../screens/Blog";
 
 const BlogPage: React.FC = () => {
-  return <Heading>Blog post page</Heading>;
+  return <Blog />;
 };
 
 export default BlogPage;

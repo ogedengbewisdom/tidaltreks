@@ -1,10 +1,13 @@
 import { Skeleton, Stack } from "@chakra-ui/react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { useLocation } from "react-router-dom";
+
+// const libraries = ["places"];
 const GoogleMapPlaces = () => {
   const location = useLocation();
   const path = location.pathname;
   const apiKey = process.env.GOOGLE_API_KEY as string;
+  console.log(apiKey);
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: apiKey,
     libraries: ["places"],

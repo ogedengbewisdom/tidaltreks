@@ -7,7 +7,7 @@ const GalleryDetailPage = () => {
   const data = useLoaderData();
 
   return (
-    <Wrapper title={data.title} bgSrc={data.src[0]}>
+    <Wrapper title={data.title} bgSrc={data.src[0]} key={data.title}>
       <GalleryDetail data={data} />
     </Wrapper>
   );

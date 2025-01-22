@@ -32,7 +32,7 @@ const GalleryDetail: React.FC<any> = (props) => {
         >
 
           {props.data.src.map((src: string, index: number) => {
-            console.log(src);
+         
             return (
               <Box
                 key={index}
