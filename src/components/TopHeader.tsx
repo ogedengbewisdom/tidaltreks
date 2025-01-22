@@ -1,12 +1,10 @@
-import { Box, Flex, useToast } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons/faSquareInstagram";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 const TopHeader: React.FC = () => {
-  const toast = useToast();
   const phoneNumber = "07368 536127";
   const email = "tidaltreks@gmail.co.uk";
   // const toastFunction = toast({
