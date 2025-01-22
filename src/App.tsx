@@ -6,9 +6,11 @@ import RootLayout from "./pages/RootLayout";
 import ErrorPage from "./pages/Error";
 import BookCruisePage from "./pages/BookCruise";
 import MenusPage from "./pages/Menus";
-import PrivateEventsPage from "./pages/PrivateEvents";
+import PrivateEventsPage, { privateEventsLoader } from "./pages/PrivateEvents";
 import BusinessEventsPage from "./pages/BusinessEvents";
 import RoutePage from "./pages/Route";
+import GalleryPage from "./pages/Gallery";
+import GalleryDetailPage, { galleryDetailLoader } from "./pages/GalleryDetail";
 
 function App() {
   const router = createBrowserRouter([
@@ -21,10 +23,24 @@ function App() {
         { path: "blog", element: <BlogPage /> },
         { path: "book-a-cruise", element: <BookCruisePage /> },
         { path: "menus", element: <MenusPage /> },
-        { path: "private-events", element: <PrivateEventsPage /> },
+        {
+          path: "private-events",
+          element: <PrivateEventsPage />,
+          loader: privateEventsLoader,
+        },
         { path: "business-events", element: <BusinessEventsPage /> },
         { path: "route", element: <RoutePage /> },
+        {
+          path: "gallery",
+          children: [{ index: true, element: <GalleryPage /> }],
+        },
       ],
+    },
+    {
+      path: "/gallery/:galleryId",
+      element: <GalleryDetailPage />,
+      errorElement: <ErrorPage />,
+      loader: galleryDetailLoader,
     },
   ]);
   return <RouterProvider router={router} />;

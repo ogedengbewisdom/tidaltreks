@@ -30,6 +30,8 @@ const RootLayout = () => {
               ? 'url("/personal-events-splash-image.jpg")'
               : path === "/route"
               ? 'url("/Albert-Dock-49031-wpcf_1920x520.jpg")'
+              : path === "/gallery"
+              ? 'url("/IMG_2052-wpcf_1920x450.jpg")'
               : "",
 
           md:
@@ -45,12 +47,14 @@ const RootLayout = () => {
               ? 'url("/personal-events-splash-image.jpg")'
               : path === "/route"
               ? 'url("/Albert-Dock-49031-wpcf_1920x520.jpg")'
+              : path === "/gallery"
+              ? 'url("/IMG_2052-wpcf_1920x450.jpg")'
               : "",
         }}
-        bgSize="cover"
+        bgSize={"cover"}
         bgRepeat="no-repeat"
         backgroundPosition={"center"}
-        h={{ base: "60vh", md: "100%" }}
+        h={{ base: path === "/business-events" ? "35vh" : "53vh", md: "100%" }}
       >
         <Box bgColor={path === "/route" ? "rgba(0,0,0,0.4)" : ""}>
           <MainNavigation />
@@ -99,7 +103,7 @@ const RootLayout = () => {
         bg={"rgba(0, 0, 0, 0.9)"}
         py={"20px"}
         px={"10px"}
-        mt={"-135px"}
+        mt={"-138px"}
       >
         <Heading
           as={"h3"}
@@ -151,10 +155,9 @@ const RootLayout = () => {
         justifyContent={"center"}
         flexDirection={"column"}
         gap={"20px"}
-        mt={{ base: "-250px", sm: "-355px", md: "-200px" }}
+        mt={{ base: "-250px", sm: "-250px", md: "-200px" }}
         py={"1rem"}
       >
-        {" "}
         <Heading
           as={"h1"}
           color={"#FFF"}
@@ -174,6 +177,37 @@ const RootLayout = () => {
         >
           Tidal Treks glides past serene parks and sandy beaches, offering
           breathtaking views of these tranquil, picturesque landscapes
+        </Text>
+      </Box>
+      <Box
+        display={{ base: path === "/gallery" ? "flex" : "none" }}
+        alignItems={"center"}
+        justifyContent={"center"}
+        flexDirection={"column"}
+        gap={"20px"}
+        mt={{ base: "-250px", sm: "-250px", md: "-200px" }}
+        py={"1rem"}
+      >
+        <Heading
+          as={"h1"}
+          color={"#FFF"}
+          fontSize={"32px"}
+          fontWeight={600}
+          className="montserrat"
+          textShadow={"rgb(0, 0, 0) 2px 2px 0px"}
+          textTransform={"uppercase"}
+        >
+          Gallery
+        </Heading>
+        <Text
+          color={"#FFF"}
+          fontSize={{ base: "20px", md: "24px" }}
+          textAlign={"center"}
+          className="montserrat"
+          px={{ sm: "1rem" }}
+        >
+          This are some images of the events hosted by Tidal Treks for our
+          wonderful client, with 5 star recomendation
         </Text>
       </Box>
       <main>
@@ -243,7 +277,7 @@ const RootLayout = () => {
               <strong>
                 <a href="https://x.com/OnimisiWisdom">Ogedengbe Wisdom</a>
               </strong>{" "}
-              | © Tidal Treks 2025
+              | © Tidal Treks {new Date().getFullYear()}
             </Text>
           </Box>
         </Box>

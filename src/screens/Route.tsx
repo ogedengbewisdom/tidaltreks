@@ -13,7 +13,7 @@ const Route = () => {
 
   return (
     <>
-      <Box mt={{ base: "35px", sm: "140px", md: "40px", "2xl": "75px" }}>
+      <Box mt={{ base: "35px", sm: "35px", md: "40px", "2xl": "75px" }}>
         <GoogleMapPlaces />
       </Box>
       <Box

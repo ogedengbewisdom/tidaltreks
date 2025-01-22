@@ -56,8 +56,6 @@ const MobileNavbar: React.FC<MobileNavbarPops> = (props) => {
                     h={"auto"}
                   />
                 </Link>
-                {/* button */}
-                {/* <DrawerTrigger asChild> */}
                 <Box
                   w={"40px"}
                   h={"40px"}
@@ -65,9 +63,8 @@ const MobileNavbar: React.FC<MobileNavbarPops> = (props) => {
                   display={{ base: "block", lg: "none" }}
                   onClick={props.onClose}
                 >
-                  <Image src="icons8-hamburger-button-48 (1).png" />
+                  <Image src="/icons8-hamburger-button-48 (1).png" />
                 </Box>
-                {/* </DrawerTrigger> */}
               </Box>
             </Box>
 

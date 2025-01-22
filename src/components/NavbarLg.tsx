@@ -68,7 +68,7 @@ const NavBarLg = () => {
             display={{ base: "block", lg: "none" }}
             onClick={onOpen}
           >
-            <Image src="icons8-hamburger-button-48 (1).png" />
+            <Image src="/icons8-hamburger-button-48 (1).png" />
           </Box>
           {/* </DrawerTrigger> */}
 

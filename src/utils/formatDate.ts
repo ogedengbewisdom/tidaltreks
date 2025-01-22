@@ -1,8 +1,12 @@
 type formatSpecificDateProps = { day: number; month: string; year: number };
+type MonthTypeProps = "short" | "numeric" | "2-digit" | "long" | "narrow";
 
-export const formatSpecificDate = (date: Date): formatSpecificDateProps => {
+export const formatSpecificDate = (
+  date: Date,
+  monthType: MonthTypeProps = "short"
+): formatSpecificDateProps => {
   const day = date.getDate(); // Day of the month
-  const month = date.toLocaleString("default", { month: "short" }); // Short month name (e.g., Jan)
+  const month = date.toLocaleString("default", { month: monthType }); // Short month name (e.g., Jan)
   const year = date.getFullYear(); // Full year
   return { day: day, month: month, year: year };
 };
@@ -44,7 +48,7 @@ export const LINKS = [
   { title: "ROUTE", link: "/route" },
   { title: "GALLERY", link: "/gallery" },
   { title: "GIFT CARDS", link: "/gift-card" },
-  { title: "BLOG", link: "blog" },
+  { title: "BLOG", link: "/blog" },
 ];
 
 export const EVENTACTIVITYLINK = [
@@ -228,5 +232,112 @@ export const EVENTSFOOD = [
       "Returns at 2pm",
     ],
     amount: 20,
+  },
+];
+
+export const GALLERY = [
+  {
+    title: "Rotary club dinner",
+    date: new Date(2017, 8, 15),
+    src: [
+      "/5.jpeg",
+      "/birthday-parties-760x398.jpg",
+      "/Business-Events-02-760x398.jpg",
+      "/Business-Events-04-760x398.jpg",
+      "/christenings-communions-760x398.jpg",
+      "/FG-Saloon-new-chairs-cropped.jpg",
+      "/IMG_1598.JPG",
+      "/IMG_1601.JPG",
+      "/IMG_1603.JPG",
+      "/other-personal-events-760x398.jpg",
+      "/personal-events-splash-image.jpg",
+      "/usp-albert-dock.jpg",
+      "/usp-seating-760x398.jpg",
+      "/wedding-receptions-760x398.jpg",
+    ],
+  },
+  {
+    title: "Christiening",
+    date: new Date(2017, 8, 15),
+    src: [
+      "/3.jpeg",
+      "/9-768x576.jpeg",
+      "/11-768x576.jpeg",
+      "/12-768x576.jpeg",
+      "/13-768x576.jpeg",
+      "/14-768x432.png",
+      "/15-768x432.png",
+      "/16-768x432.png",
+      "/IMG_1603.JPG",
+      "/4-768x576.jpeg",
+    ],
+  },
+  {
+    title: "The boat",
+    date: new Date(2016, 10, 1),
+    src: [
+      "/IMG_2488.jpg",
+      "/book-business.jpg",
+      "/IMG_2042-1-768x576.jpg",
+      "/IMG_1923-768x576.jpg",
+      "/IMG_1924-768x348.jpg",
+      "/IMG_1978-1-768x576.jpg",
+      "/IMG_2488-768x576.jpg",
+    ],
+  },
+  {
+    title: "21st birthday party",
+    date: new Date(2017, 8, 15),
+    src: [
+      "/image1.jpeg",
+      // "/8-wpcf_368x212.jpeg",
+      "/IMG_2056-240x180.jpg",
+      "/IMG_2055-240x180.jpg",
+      "/IMG_2053-240x180.jpg",
+      "/IMG_2052-240x180.jpg",
+      "/IMG_2042-240x180.jpg",
+      "/IMG_2059-240x180.jpg",
+      "/IMG_2058-240x180.jpg",
+    ],
+  },
+  {
+    title: "Free mason event",
+    date: new Date(2017, 8, 15),
+    src: [
+      "/IMG_1965.jpg",
+      "/IMG_1966-240x180.jpg",
+      "/IMG_1933-240x180.jpg",
+      "/IMG_1931-240x180.jpg",
+      "/IMG_1926-240x180.jpg",
+      "/IMG_1991-240x180.jpg",
+      "/IMG_1989-240x180.jpg",
+      "/IMG_1987-240x180.jpg",
+      "/IMG_1984-240x180.jpg",
+      "/IMG_1983-240x180.jpg",
+      "/IMG_1982-240x180.jpg",
+      "/IMG_1977-240x180.jpg",
+      "/IMG_1969-240x180.jpg",
+    ],
+  },
+  {
+    title: "Halloween party",
+    date: new Date(2016, 9, 29),
+    src: [
+      "/IMG_0051.jpg",
+      "/IMG_0047-240x180.jpg",
+      "/IMG_0052-240x180.jpg",
+      "/IMG_0053-250x126.jpg",
+      "/IMG_0054-240x180.jpg",
+      "/IMG_0055-240x180.jpg",
+      "/IMG_0056-240x180.jpg",
+      "/IMG_0057-240x180.jpg",
+      "/IMG_0058-240x180.jpg",
+      "/IMG_0059-240x180.jpg",
+      "/IMG_0060-240x180.jpg",
+      "/IMG_0062-240x180.jpg",
+      "/IMG_0063-240x180.jpg",
+      "/IMG_0066-240x180.jpg",
+      "/IMG_0039-240x180.jpg",
+    ],
   },
 ];

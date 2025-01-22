@@ -1,3 +1,4 @@
+import { Skeleton, Stack } from "@chakra-ui/react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { useLocation } from "react-router-dom";
 const GoogleMapPlaces = () => {
@@ -25,7 +26,11 @@ const GoogleMapPlaces = () => {
           {/* <div className=" text-[#666] h-[50vh] w-[100%]"></div> */}
         </GoogleMap>
       ) : (
-        <></>
+        <Stack>
+          <Skeleton height="40px" />
+          <Skeleton height="40px" />
+          <Skeleton height="40px" />
+        </Stack>
       )}
     </>
   );

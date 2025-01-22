@@ -1,8 +1,12 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
-import { ACTIVITY, EVENTVENUE } from "../utils/formatDate";
+import { ACTIVITY } from "../utils/formatDate";
 import EventVenue from "./EventVenue";
 
-const PrivateEvents = () => {
+interface PrivateEventsProps {
+  events: [{ title: string; description: string; src: string; amount: string }];
+}
+
+const PrivateEvents: React.FC<PrivateEventsProps> = ({ events }) => {
   return (
     <>
       <Box
@@ -114,7 +118,7 @@ const PrivateEvents = () => {
           paddingTop={{ base: "27px", md: "90px" }}
           paddingBottom={{ base: "70px", md: "90px" }}
         >
-          {EVENTVENUE.map((event, index) => {
+          {events.map((event, index) => {
             return (
               <EventVenue
                 key={index}
