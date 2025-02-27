@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -73,12 +74,60 @@ body {
   font-style: normal;
 }
 
+.roboto {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 .helvetica {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-style: normal;
 }
 
-
 .hover {
-  color: #A89252;
+  color: #a89252;
+}
+
+.disabled-date {
+  cursor: not-allowed;
+  background: #fff !important;
+  color: #697886 !important;
+  font-family: "Roboto", serif !important;
+}
+.react-calendar abbr {
+  text-decoration: none !important;
+  border-bottom: none !important; /* Some browsers use this instead */
+  font-family: "Roboto", serif !important;
+}
+.react-calendar__navigation button:has(span) {
+  font-weight: bold !important;
+  font-family: "Roboto", serif !important;
+}
+.react-calendar__tile--active {
+  background-color: #757575 !important;
+  color: white !important;
+  border-radius: 2px;
+}
+.react-calendar {
+  border-bottom: 1px solid #ccc;
+  border-left: none !important; /* Removes all borders */
+  border-right: none !important;
+  border-top: none !important;
+  box-shadow: none !important; /* Ensures no extra styling */
+}
+/* .react-calendar__navigation button:nth-child(1),
+.react-calendar__navigation button:nth-child() {
+  display: none;
+} */
+.react-calendar__navigation {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.react-calendar__tile--now {
+  background-color: #1d875a !important;
+  color: white !important;
+  border-radius: 2px;
 }

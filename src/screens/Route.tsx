@@ -1,16 +1,14 @@
 import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import GoogleMapPlaces from "./GoogleMap";
-import { EVENTACTIVITYLINK } from "../utils/formatDate";
 import EventActivity from "../components/EventActivity";
+import { useNavigate } from "react-router-dom";
+import { EVENTACTIVITYLINK } from "../utils/formatDate";
 
 const Route = () => {
-  const FILTEREDACTIVITY = EVENTACTIVITYLINK.filter(
-    (event) =>
-      event.name !== "Evening dinner cruise" &&
-      event.name !== "Sunday lunch cruises" &&
-      event.name !== "Afternoon tea cruises"
-  );
-
+  const navigate = useNavigate();
+  const navigateHandler = (link: string) => {
+    navigate(link);
+  };
   return (
     <>
       <Box mt={{ base: "35px", sm: "35px", md: "40px", "2xl": "75px" }}>
@@ -39,10 +37,10 @@ const Route = () => {
           paddingX={{ base: "1rem", "2xl": "1rem" }}
           mt={"30px"}
         >
-          {FILTEREDACTIVITY.map((item, index) => {
+          {EVENTACTIVITYLINK.map((item, index) => {
             return (
               <EventActivity
-                link={item.link}
+                onClick={() => navigateHandler(item.link)}
                 name={item.name}
                 src={item.src}
                 key={index}

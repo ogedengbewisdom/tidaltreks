@@ -7,13 +7,6 @@ import { Link } from "react-router-dom";
 const TopHeader: React.FC = () => {
   const phoneNumber = "07368 536127";
   const email = "tidaltreks@gmail.co.uk";
-  // const toastFunction = toast({
-  //   title: "ogeednegbejj@gmail.com",
-  //   description: "please contact me",
-  //   status: "success",
-  //   duration: 9000,
-  //   isClosable: true,
-  // });
 
   return (
     <>

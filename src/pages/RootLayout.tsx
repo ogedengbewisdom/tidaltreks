@@ -5,10 +5,14 @@ import Hero from "../screens/Hero";
 import TopHeader from "../components/TopHeader";
 import Footer from "../components/Footer";
 import ScrollToTop from "../screens/ScrollTop";
+import { useContext } from "react";
+import { TidalTreksContextAPI } from "../../store/context";
 
 const RootLayout = () => {
   const location = useLocation();
   const path = location.pathname;
+
+  const { openModalFunction } = useContext(TidalTreksContextAPI);
 
   return (
     <Box position={"relative"}>
@@ -34,6 +38,8 @@ const RootLayout = () => {
               ? 'url("/IMG_2052-wpcf_1920x450.jpg")'
               : path === "/blog"
               ? 'url("/Business-Events-01.jpg")'
+              : path === "/valentines-cruise"
+              ? 'url("/IMG_5071-wpcf_1432x565.jpeg")'
               : "",
 
           md:
@@ -53,6 +59,8 @@ const RootLayout = () => {
               ? 'url("/IMG_2052-wpcf_1920x450.jpg")'
               : path === "/blog"
               ? 'url("/Business-Events-01.jpg")'
+              : path === "/valentines-cruise"
+              ? 'url("/IMG_5071-wpcf_1432x565.jpeg")'
               : "",
         }}
         bgSize={"cover"}
@@ -267,6 +275,7 @@ const RootLayout = () => {
           alignItems={"center"}
           justifyContent={"center"}
           gap={"10px"}
+          onClick={openModalFunction}
         >
           {/* <FontAwesomeIcon icon={faMarkdown} /> */}
           <Box w={"24px"} h={"24px"}>

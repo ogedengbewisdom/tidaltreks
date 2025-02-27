@@ -1,10 +1,17 @@
+
 import NavBarLg from "../components/NavbarLg";
 
 const MainNavigation: React.FC = () => {
+
+
+
   return (
-    <header>
-      <NavBarLg />
-    </header>
+    <>
+      <header>
+        <NavBarLg />
+      </header>
+   
+    </>
   );
 };
 

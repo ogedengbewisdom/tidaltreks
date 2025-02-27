@@ -12,7 +12,8 @@ import RoutePage from "./pages/Route";
 import GalleryPage from "./pages/Gallery";
 import GalleryDetailPage, { galleryDetailLoader } from "./pages/GalleryDetail";
 import BlogDetailPage, { blogLoader } from "./pages/BlogDetail";
-
+import TidalTrekContextProvider from "../store/contextProvider";
+import Valentine from "./pages/Valentine";
 function App() {
   const router = createBrowserRouter([
     {
@@ -24,6 +25,7 @@ function App() {
         { path: "blog", element: <BlogPage /> },
         { path: "book-a-cruise", element: <BookCruisePage /> },
         { path: "menus", element: <MenusPage /> },
+        { path: "valentines-cruise", element: <Valentine /> },
         {
           path: "private-events",
           element: <PrivateEventsPage />,
@@ -50,7 +52,11 @@ function App() {
       loader: blogLoader,
     },
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <TidalTrekContextProvider>
+      <RouterProvider router={router} />
+    </TidalTrekContextProvider>
+  );
 }
 
 export default App;

@@ -5,16 +5,13 @@ import {
   GALLERY,
 } from "../utils/formatDate";
 import EventActivity from "../components/EventActivity";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Gallery = () => {
-  const FILTEREDACTIVITY = EVENTACTIVITYLINK.filter(
-    (event) =>
-      event.name !== "Evening dinner cruise" &&
-      event.name !== "Sunday lunch cruises" &&
-      event.name !== "Afternoon tea cruises"
-  );
-
+  const navigate = useNavigate();
+  const navigateHandler = (link: string) => {
+    navigate(link);
+  };
   return (
     <>
       <Box
@@ -109,10 +106,10 @@ const Gallery = () => {
             paddingX={{ base: "1rem", "2xl": "1rem" }}
             mt={"30px"}
           >
-            {FILTEREDACTIVITY.map((item, index) => {
+            {EVENTACTIVITYLINK.map((item, index) => {
               return (
                 <EventActivity
-                  link={item.link}
+                  onClick={() => navigateHandler(item.link)}
                   name={item.name}
                   src={item.src}
                   key={index}

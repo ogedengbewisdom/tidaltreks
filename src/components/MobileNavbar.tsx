@@ -49,11 +49,10 @@ const MobileNavbar: React.FC<MobileNavbarPops> = (props) => {
               >
                 <Link to={"/"} onClick={() => props.onClose()}>
                   <Image
-                    pos={"absolute"}
-                    top={"16px"}
                     src="/tidalTreksLogo.JPG"
-                    w={{ base: 100, "2xl": 115 }}
-                    h={"auto"}
+                    w={{ base: "130px", md: "166px" }}
+                    h={{ base: "75px", md: "99px" }}
+                    borderRadius={"5px"}
                   />
                 </Link>
                 <Box

@@ -1,14 +1,26 @@
 import { Box, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
-
+import { useContext } from "react";
+import { TidalTreksContextAPI } from "../../store/context";
 import EventActivity from "../components/EventActivity";
 import EventRoute from "./EventRoute";
 import SocialEvents from "./SocialEvents";
 import Advert from "./Advert";
-import { EVENTACTIVITYLINK, EVENTROUTE } from "../utils/formatDate";
+import { BOOKINGS, EVENTACTIVITYLINK, EVENTROUTE } from "../utils/formatDate";
+import { useNavigate } from "react-router-dom";
+import BookingModal from "./BookingModal";
 
 const Events = () => {
+  const { openModalFunction, bookingHandler } =
+    useContext(TidalTreksContextAPI);
+  const navigate = useNavigate();
+
+  const navigateHandler = (link: string) => {
+    navigate(link);
+  };
+
   return (
     <>
+      <BookingModal />
       <Box
         as={"section"}
         marginX={{ md: "auto" }}
@@ -46,6 +58,7 @@ const Events = () => {
               display={"flex"}
               alignItems={"center"}
               gap={"10px"}
+              onClick={openModalFunction}
             >
               {/* <FontAwesomeIcon icon={faMarkdown} /> */}
               <Box w={"24px"} h={"24px"}>
@@ -79,16 +92,26 @@ const Events = () => {
         </Box>
 
         <SimpleGrid
-          display={{ base: "grid", md: "grid" }}
+          display={{ base: "grid" }}
           columns={{ base: 1, md: 3 }}
           gap={{ base: "15px", md: "18px", lg: "20px", xl: "30px" }}
           paddingX={{ base: "1rem", "2xl": "1rem" }}
           mt={"58px"}
         >
+          {BOOKINGS.slice(0, 3).map((booking, index) => {
+            return (
+              <EventActivity
+                key={index}
+                name={booking.title}
+                onClick={() => bookingHandler(booking.id)}
+                src={booking.src}
+              />
+            );
+          })}
           {EVENTACTIVITYLINK.map((item, index) => {
             return (
               <EventActivity
-                link={item.link}
+                onClick={() => navigateHandler(item.link)}
                 name={item.name}
                 src={item.src}
                 key={index}

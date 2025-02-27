@@ -180,9 +180,12 @@ const Footer: React.FC = () => {
           py={{ base: "35px" }}
           className="Montserrat"
         >
-          <Box w={"100px"} h={"100px"}>
-            <Image src="/tidalTreksLogo.JPG" />
-          </Box>
+          <Image
+            src="/tidalTreksLogo.JPG"
+            w={{ base: "130px", md: "166px" }}
+            h={{ base: "75px", md: "99px" }}
+            borderRadius={"5px"}
+          />
           <Box>
             <Text
               className="Montserrat"

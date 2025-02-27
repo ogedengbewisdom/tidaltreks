@@ -7,17 +7,15 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { EVENTACTIVITYLINK, LINKS } from "../utils/formatDate";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import EventActivity from "../components/EventActivity";
 
 const Menus = () => {
+  const navigate = useNavigate();
   // const ACTIVITYNAME = Object.keys(EVENTACTIVITYLINK[0]);
-  const FILTEREDACTIVITY = EVENTACTIVITYLINK.filter(
-    (event) =>
-      event.name !== "Evening dinner cruise" &&
-      event.name !== "Sunday lunch cruises" &&
-      event.name !== "Afternoon tea cruises"
-  );
+  const navigateHandler = (link: string) => {
+    navigate(link);
+  };
 
   return (
     <>
@@ -275,10 +273,10 @@ const Menus = () => {
             paddingX={{ base: "1rem", "2xl": "1rem" }}
             mt={"58px"}
           >
-            {FILTEREDACTIVITY.map((item, index) => {
+            {EVENTACTIVITYLINK.map((item, index) => {
               return (
                 <EventActivity
-                  link={item.link}
+                  onClick={() => navigateHandler(item.link)}
                   name={item.name}
                   src={item.src}
                   key={index}
