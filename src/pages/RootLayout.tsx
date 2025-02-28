@@ -1,4 +1,4 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useSearchParams } from "react-router-dom";
 import MainNavigation from "../screens/MainNavigation";
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import Hero from "../screens/Hero";
@@ -9,6 +9,9 @@ import { useContext } from "react";
 import { TidalTreksContextAPI } from "../../store/context";
 
 const RootLayout = () => {
+  const [searchParams] = useSearchParams();
+
+  const requestTitle = searchParams.get("TYPE");
   const location = useLocation();
   const path = location.pathname;
 
@@ -40,6 +43,8 @@ const RootLayout = () => {
               ? 'url("/Business-Events-01.jpg")'
               : path === "/valentines-cruise"
               ? 'url("/IMG_5071-wpcf_1432x565.jpeg")'
+              : path.startsWith("/request-a-quote")
+              ? 'url("/IMG_1601.JPG")'
               : "",
 
           md:
@@ -61,6 +66,8 @@ const RootLayout = () => {
               ? 'url("/Business-Events-01.jpg")'
               : path === "/valentines-cruise"
               ? 'url("/IMG_5071-wpcf_1432x565.jpeg")'
+              : path.startsWith("/request-a-quote")
+              ? 'url("/IMG_1601.JPG")'
               : "",
         }}
         bgSize={"cover"}
@@ -190,6 +197,43 @@ const RootLayout = () => {
           Tidal Treks glides past serene parks and sandy beaches, offering
           breathtaking views of these tranquil, picturesque landscapes
         </Text>
+      </Box>
+
+      <Box
+        display={{
+          base: path.startsWith("/request-a-quote") ? "flex" : "none",
+        }}
+        alignItems={"center"}
+        justifyContent={"center"}
+        flexDirection={"column"}
+        gap={"20px"}
+        mt={{ base: "-150px", sm: "-210px", md: "-150px" }}
+        py={"1rem"}
+      >
+        {requestTitle && (
+          <Text
+            as={"h2"}
+            color={"#FFF"}
+            fontSize={{ base: "20px", md: "24px" }}
+            textAlign={"center"}
+            className="montserrat"
+            textTransform={"uppercase"}
+            fontWeight={500}
+          >
+            {requestTitle}
+          </Text>
+        )}
+        <Heading
+          as={"h1"}
+          color={"#FFF"}
+          fontSize={"32px"}
+          fontWeight={600}
+          className="montserrat"
+          textShadow={"rgb(0, 0, 0) 2px 2px 0px"}
+          textTransform={"uppercase"}
+        >
+          Request A Quote
+        </Heading>
       </Box>
       <Box
         display={{ base: path === "/blog" ? "flex" : "none" }}

@@ -47,7 +47,7 @@ export const LINKS = [
   { title: "BUSINESS EVENTS", link: "/business-events" },
   { title: "ROUTE", link: "/route" },
   { title: "GALLERY", link: "/gallery" },
-  { title: "GIFT CARDS", link: "/gift-card" },
+  // { title: "GIFT CARDS", link: "/gift-card" },
   { title: "BLOG", link: "/blog" },
 ];
 
@@ -361,6 +361,7 @@ export const BOOKINGS = [
   {
     id: "1",
     title: "SUNDAY LUNCH CRUISE",
+    date: "Sunday",
     title2:
       "Sunday Roast Dinner Cruise Book during Dec Go to Christmas Dinner Cruise or call to book 07540373838",
     description: "",
@@ -379,11 +380,13 @@ export const BOOKINGS = [
       "For a different take on the classic Sunday lunch experience step aboard The Tidal treks for a relaxing cruise. Our talented chefs prepare a tasty Two-course set lunch, with children’s menus available, so there really is something for everyone. Board the boat at the Albert Dock and enjoy a relaxing cruise down Liverpool’s historic docks as our staff serve your meal. Best enjoyed with friends and family.",
     options: "Vegan & Veggie options available",
     src: "/book-lunch-dinner-wpcf_368x212-1.jpg",
+    img: "/Book-A-Cruise-09-368x328.jpg",
   },
   {
     id: "2",
     title: "EVENING DINNER CRUISE",
     title2: "Evening Dinner Cruise",
+    date: "Wednesday to Saturday",
     description:
       "Tidal treks Corner of Salthouse Quay & Gower Street Salthouse Dock, Royal Albert Dock Complex.",
     details:
@@ -403,12 +406,14 @@ export const BOOKINGS = [
       "Our evening dinner cruises provide a special and atmospheric dining experience, perfect for a relaxed evening with friends and family or a romantic dinner with a significant other. Board the boat at the Albert Dock. Our staff will then serve your two-course dinner as you peacefully cruise through Liverpool’s historic docks.",
     options: "Vegan options available!",
     src: "/IMG_1987-wpcf_368x212.jpg",
+    img: "/AdobeStock_78931456-760x398.jpeg",
   },
   {
     id: "4",
     title: "AFTERNOON TEA CRUISE",
     title2: "Afternoon Tea Cruise on Board Tidal treks",
     description: "",
+    date: "Monday & Tuesday",
     details: "£22 per Adult l All ages l 2 Hours",
     infoTitle: "Afternoon Tea & Biscuit Historical Guided Cruise",
     info: ["From Wednesday to Saturday", "Historical guided tour included"],
@@ -417,12 +422,14 @@ export const BOOKINGS = [
       "Enjoy an afternoon historical guided cruise on board Tidal treks whilst enjoying tea, cream scones, cakes and sandwiches. We sail half an hour after the boarding time.",
     options: "",
     src: "/2018-11-06-at-17.30.366-1-wpcf_368x212.jpeg",
+    img: "/Afternoon-Tea-Cruise-368x328.jpg",
   },
 
   {
     id: "3",
     title: "MID-MORNING CRUISE",
     title2: "Morning Tea & Sandwiches Cruise",
+    date: "Monday & Tuesday",
     description: "",
     details: "£12 per Adult | Board at 10:00",
     infoTitle: "Mid Morning Tea & Biscuit Historical Guided Cruise",

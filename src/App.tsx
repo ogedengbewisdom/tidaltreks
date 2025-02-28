@@ -14,6 +14,7 @@ import GalleryDetailPage, { galleryDetailLoader } from "./pages/GalleryDetail";
 import BlogDetailPage, { blogLoader } from "./pages/BlogDetail";
 import TidalTrekContextProvider from "../store/contextProvider";
 import Valentine from "./pages/Valentine";
+import RequestForm from "./pages/RequestForm";
 function App() {
   const router = createBrowserRouter([
     {
@@ -26,6 +27,7 @@ function App() {
         { path: "book-a-cruise", element: <BookCruisePage /> },
         { path: "menus", element: <MenusPage /> },
         { path: "valentines-cruise", element: <Valentine /> },
+        { path: "request-a-quote", element: <RequestForm /> },
         {
           path: "private-events",
           element: <PrivateEventsPage />,

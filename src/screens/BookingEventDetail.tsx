@@ -43,7 +43,7 @@ const BookingEventDetail = () => {
         paddingTop={"1.5rem"}
         pb={"15px"}
       >
-        <Box cursor={"pointer"} onClick={openModalFunction}>
+        <Box cursor={"pointer"} onClick={openModalFunction} width={"100px"}>
           <HomeIcon />
         </Box>
       </Box>

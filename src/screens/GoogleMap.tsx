@@ -7,7 +7,7 @@ const GoogleMapPlaces = () => {
   const location = useLocation();
   const path = location.pathname;
   const apiKey = process.env.GOOGLE_API_KEY as string;
-  console.log(apiKey);
+
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: apiKey,
     libraries: ["places"],

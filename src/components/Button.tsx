@@ -5,16 +5,19 @@ interface ButtonsProps {
   title?: string;
   bgColor?: string;
   hbgColor?: string;
+  onClick?: () => void;
 }
 const Button: React.FC<ButtonsProps> = (props) => {
   return (
     <Box
       as={"button"}
+      onClick={props.onClick}
       bgColor={props.bgColor ? props.bgColor : "#000"}
       px={"20px"}
       h={{ base: "38px", md: "45px" }}
       display={"flex"}
       alignItems={"center"}
+      whiteSpace={"nowrap"}
       gap={"10px"}
       color={"#A89252"}
       _hover={{

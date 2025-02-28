@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useCallback, useState } from "react";
 import { TidalTreksContextAPI } from "./context";
 import { useDisclosure } from "@chakra-ui/react";
 import { BOOKINGS } from "../src/utils/formatDate";
@@ -21,16 +21,19 @@ const TidalTrekContextProvider = ({ children }: TidalTreksContextApiProps) => {
     about: "",
   });
 
-  const bookingDetail = (id: string) => {
-    return BOOKINGS.find((project) => project.id === id);
-  };
+  const bookingDetail = useCallback(
+    (id: string) => {
+      return BOOKINGS.find((project) => project.id === id);
+    },
+    [BOOKINGS]
+  );
 
   const bookingHandler = (id: string) => {
     const booking = bookingDetail(id);
     if (booking) {
       setShowlist(false);
       onOpenBookModal();
-      setSelectedBookings(booking);
+      setSelectedBookings((prev) => ({ ...prev, ...booking }));
     }
   };
 

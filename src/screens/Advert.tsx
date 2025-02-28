@@ -1,5 +1,6 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
 
 const Advert = () => {
   return (
@@ -50,12 +51,14 @@ const Advert = () => {
           </span>
         </Text>
         <Box display={"flex"} justifyContent={"center"} my={"32px"}>
-          <Button
-            title="BOOK AN EVENT"
-            hbgColor={"#FFF"}
-            bgColor={"#FFF"}
-            color={"black"}
-          />
+          <Link to={"/request-a-quote"}>
+            <Button
+              title="BOOK AN EVENT"
+              hbgColor={"#FFF"}
+              bgColor={"#FFF"}
+              color={"black"}
+            />
+          </Link>
         </Box>
       </Box>
     </Box>

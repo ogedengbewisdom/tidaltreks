@@ -1,5 +1,6 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
 
 interface EventVenueProps {
   title: string;
@@ -9,6 +10,8 @@ interface EventVenueProps {
   amount: string;
 }
 const EventVenue: React.FC<EventVenueProps> = (props) => {
+  const link = props.title.replace(/\s+/g, "+");
+  // console.log("link", link.replace(/\+/g, " "));
   return (
     <Box
       display={"flex"}
@@ -62,7 +65,9 @@ const EventVenue: React.FC<EventVenueProps> = (props) => {
             <strong>{props.amount}</strong>
           </Text>
           <Box display={"flex"} justifyContent={"center"} mt={"25px"}>
-            <Button title="ENQUIRE NOW" />
+            <Link to={`/request-a-quote/?TYPE=${link}`}>
+              <Button title="ENQUIRE NOW" />
+            </Link>
           </Box>
         </Box>
       </Box>

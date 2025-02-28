@@ -18,7 +18,7 @@ import {
 
 import { faWordpressSimple } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import "react-calendar/dist/Calendar.css";
 import BookingEventDetail from "./BookingEventDetail";
 import BookingListEvent from "./BookingListEvent";

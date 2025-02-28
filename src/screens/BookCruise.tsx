@@ -3,9 +3,12 @@ import EventRoute from "./EventRoute";
 import Advert from "./Advert";
 import Button from "../components/Button";
 import GoogleMapPlaces from "./GoogleMap";
-import { ACTIVITY, EVENTROUTE, EVENTSFOOD } from "../utils/formatDate";
+import { ACTIVITY, BOOKINGS, EVENTROUTE } from "../utils/formatDate";
+import { useContext } from "react";
+import { TidalTreksContextAPI } from "../../store/context";
 
 const BookCruise = () => {
+  const { bookingHandler } = useContext(TidalTreksContextAPI);
   return (
     <>
       <Box
@@ -101,7 +104,7 @@ const BookCruise = () => {
         px={{ base: "1rem", lg: "0rem" }}
       >
         <Box display={"flex"} flexDir={"column"} gap={"40px"}>
-          {EVENTSFOOD.map((event, index) => {
+          {BOOKINGS.slice(0, 3).map((event, index) => {
             return (
               <Box
                 key={index}
@@ -126,7 +129,7 @@ const BookCruise = () => {
                   w={{ base: "100%", md: "234.78px", lg: "367px" }}
                   h={{ md: "209.5px", lg: "327px" }}
                 >
-                  <Image src={event.src} w={"100%"} h={"100%"} />
+                  <Image src={event.img} w={"100%"} h={"100%"} />
                 </Box>
                 <Box>
                   <Box my={"20px"}>
@@ -165,7 +168,7 @@ const BookCruise = () => {
                         color={"#4a494a"}
                         className="montserrat"
                       >
-                        {event.description}
+                        {event.about}
                       </Text>
                       <Text
                         fontSize={"14px"}
@@ -174,13 +177,13 @@ const BookCruise = () => {
                         color={"#4a494a"}
                         className="montserrat"
                       >
-                        <strong>{event.footer}</strong>
+                        <strong>{`Please provide us with advanced notice if any member of your party have allergies or special dietary requirements.`}</strong>
                       </Text>
                     </Box>
                     {/* 2 */}
                     <Box px={{ base: "1rem", lg: "0rem" }}>
                       <List listStyleType={"initial"} color={"rgb(74, 73, 74)"}>
-                        {event.lists.map((list, index) => {
+                        {event.info.map((list, index) => {
                           return (
                             <ListItem
                               key={index}
@@ -204,7 +207,7 @@ const BookCruise = () => {
                         fontWeight={600}
                         className="montserrat"
                       >
-                        £{event.amount} <br />
+                        £{event.rates.adult} <br />
                         <span
                           style={{
                             fontSize: "21px",
@@ -225,8 +228,12 @@ const BookCruise = () => {
                     bottom={{ md: "0px" }}
                     right={{ md: "0px" }}
                   >
-                    <Button title="Book Now" />
-                    {event.show ? <Button title="View Menu" /> : ""}
+                    <Button
+                      title="Book Now"
+                      onClick={() => {
+                        bookingHandler(event.id);
+                      }}
+                    />
                   </Box>
                 </Box>
               </Box>

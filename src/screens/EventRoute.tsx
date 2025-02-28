@@ -1,5 +1,6 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
 
 interface EventRouteProps {
   title: string;
@@ -51,7 +52,9 @@ const EventRoute: React.FC<EventRouteProps> = (props) => {
             {props.description}
           </Text>
           <Box display={"flex"} justifyContent={"center"} mt={"25px"}>
-            <Button />
+            <Link to={"/route"}>
+              <Button />
+            </Link>
           </Box>
         </Box>
       </Box>
