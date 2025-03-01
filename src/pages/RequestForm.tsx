@@ -1,6 +1,5 @@
 import {
   Box,
-  Input,
   ListItem,
   OrderedList,
   Text,

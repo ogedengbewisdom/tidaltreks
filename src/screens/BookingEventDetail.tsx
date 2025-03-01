@@ -15,6 +15,7 @@ const BookingEventDetail = () => {
   const [selectedImage, setSelectedImage] = useState(imageArray[0]);
 
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+  console.log(selectedDate);
   const { selectedBookings, openModalFunction } =
     useContext(TidalTreksContextAPI);
   const {

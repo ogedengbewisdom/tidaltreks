@@ -2,6 +2,7 @@ import { Box, Heading, Image, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import { EVENTACTIVITYLINK } from "../utils/formatDate";
 import EventActivity from "../components/EventActivity";
+import { useNavigate } from "react-router-dom";
 
 // interface GalleryProps {
 //   data: { src: string[]; title: string; date: Date }[];
@@ -16,6 +17,12 @@ const GalleryDetail: React.FC<any> = (props) => {
       event.name !== "Sunday lunch cruises" &&
       event.name !== "Afternoon tea cruises"
   );
+
+  const navigate = useNavigate();
+
+  const navigateHandler = (link: string) => {
+    navigate(link);
+  };
   return (
     <>
       <Box bgColor={"#E0E0E0"} mt={{ base: "60px", md: "120px" }}>
@@ -30,9 +37,7 @@ const GalleryDetail: React.FC<any> = (props) => {
           paddingY={{ base: "27px", md: "90px" }}
           px={{ base: "0.7rem" }}
         >
-
           {props.data.src.map((src: string, index: number) => {
-         
             return (
               <Box
                 key={index}
@@ -78,7 +83,7 @@ const GalleryDetail: React.FC<any> = (props) => {
             {FILTEREDACTIVITY.map((item, index) => {
               return (
                 <EventActivity
-                  link={item.link}
+                  onClick={() => navigateHandler(item.link)}
                   name={item.name}
                   src={item.src}
                   key={index}

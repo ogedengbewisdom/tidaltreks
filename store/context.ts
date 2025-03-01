@@ -36,5 +36,5 @@ export const TidalTreksContextAPI = createContext<TidalTreksContextApiProps>({
     options: "",
     about: "",
   },
-  bookingHandler: (id: string) => {},
+  bookingHandler: (_id: string) => {},
 });

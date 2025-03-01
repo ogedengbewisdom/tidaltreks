@@ -16,7 +16,7 @@ import { TidalTreksContextAPI } from "../../store/context";
 const NavBarLg = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const { selectedBookings, bookingHandler } = useContext(TidalTreksContextAPI);
+  const { bookingHandler } = useContext(TidalTreksContextAPI);
 
   const location = useLocation();
   const path = location.pathname;
