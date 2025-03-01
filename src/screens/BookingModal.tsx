@@ -43,11 +43,11 @@ const BookingModal = () => {
 
   return (
     <Modal
-      blockScrollOnMount={true}
-      finalFocusRef={finalRef}
       isOpen={isOpen}
       onClose={onClose}
+      finalFocusRef={finalRef}
       size={{ base: "sm", md: "3xl", lg: "4xl", xl: "5xl" }}
+      blockScrollOnMount={false}
     >
       <ModalOverlay bg="rgba(255, 255, 255, 0.8)" backdropFilter="blur(1px)" />
       <ModalContent w={{ base: "100%", md: "90vw" }} maxW="978px">
@@ -148,7 +148,7 @@ const BookingModal = () => {
             </Popover>
           </Box>
         </Box>
-        <>{showlist ? <BookingListEvent /> : <BookingEventDetail />}</>
+        <Box>{showlist ? <BookingListEvent /> : <BookingEventDetail />}</Box>
       </ModalContent>
     </Modal>
   );
